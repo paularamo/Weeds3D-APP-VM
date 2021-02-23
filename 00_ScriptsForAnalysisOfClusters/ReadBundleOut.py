@@ -6,7 +6,9 @@ import os
 import matplotlib.pyplot as plt
 from pyntcloud import PyntCloud
 
-def read_bundle_out(bundle_file):
+CLUSTER_SIZE=20
+
+def read_bundle_out(bundle_file, cluster_size):
     # fp = open(root+'bundle_020.out', "r")
     fp = open(bundle_file, "r")
     fp.readline()
@@ -79,13 +81,14 @@ def read_bundle_out(bundle_file):
     # with open('point-data-2-20.json', 'w') as fp: 
     #     json.dump(points, fp)
     
-def reject_outliers_2d(data, m=2):
-    col=data[2,:]
-    return data[:,abs(col - np.mean(col)) < m * np.std(col)]
+def reject_outliers_2d(data, m=2.25):
+    col=data[:,2]
+    return data[abs(col - np.mean(col)) < m * np.std(col)]
 
-root_dir='D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/ClusteringExp/20'
+root_dir='D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/ClusteringExp/'
+actual_dir = root_dir+str(CLUSTER_SIZE)
 bundle_files=[]
-for root, dirs, files in os.walk(root_dir):
+for root, dirs, files in os.walk(actual_dir):
     for file in files:
         if file.endswith("020.out"):
              print(os.path.join(root, file))
@@ -94,8 +97,9 @@ for root, dirs, files in os.walk(root_dir):
 cam_poses=[]
 pt_cld_clusters=[]
 for file in bundle_files:
-    pos, pt = read_bundle_out(file)
-    cam_poses.append(pos)
+    pos, pt = read_bundle_out(file, CLUSTER_SIZE)
+    if len(pos['R'])==CLUSTER_SIZE:
+        cam_poses.append(pos)
     pt_cld_clusters.append(pt)
 
 minimums=[]
@@ -105,11 +109,11 @@ total_cld=np.array(pt_cld_clusters[0]['pos'])
 total_cld_col=np.array(pt_cld_clusters[0]['col'])
 for i,pt_cld in enumerate(pt_cld_clusters):
     points = np.array(pt_cld['pos'])
-    # points_filt = reject_outliers_2d(points)
-    points_filt=points
+    points_filt = reject_outliers_2d(points)
+    # points_filt=points
     col = np.array(pt_cld['col'])
-    # col_filt = reject_outliers_2d(col)
-    col_filt=col
+    col_filt = reject_outliers_2d(col)
+    # col_filt=col
     # print(points.shape)
     # print(np.amin(points_filt, axis=0))
     minimums.append(np.amin(points_filt, axis=0))
@@ -173,7 +177,8 @@ plt.title('Variation in x,y,z bounds according to cluster')
 plt.show()
 
 plt.figure()
-plt.plot(cam_centers[:,:,2].reshape(-1,1), label='z coord')
+plt.plot(np.arange(0,cam_centers[:,:,2].reshape(-1,1).shape[0]),\
+                cam_centers[:,:,2].reshape(-1,1), label='z coord')
 plt.xlabel('frame number')
 plt.ylabel('camera z coordinate')
 plt.title('variation in camera pose (z coordinate) according to frame')
@@ -191,16 +196,74 @@ df=pd.DataFrame(
 df[['red','green','blue']] = df[['red','green','blue']].astype(np.uint8)
 cloud = PyntCloud(df)
 
+cam_to_ground_distances=[]
+for i in range(cam_centers.shape[0]):
+    print(cam_centers[i,:,2].mean()-minimums[i,2])
+    cam_to_ground_distances.append(cam_centers[i,:,2].mean()-minimums[i,2])
 
-
-
+dist_betn_2_points=1/np.array(cam_to_ground_distances)
 
 cloud.to_file("offset_cld.ply")
-fig = plt.figure()
-ax = plt.axes(projection='3d')
 
-xdata = center_data[:,0]
-ydata = center_data[:,1]
-zdata = center_data[:,2]
-ax.scatter3D(xdata, ydata, zdata, c=zdata, cmap='Greens');
-ax.scatter3D(points[:,0], points[:,1], points[:,2], c=points[:,2], cmap='Reds');
+
+i=0
+count=0
+clst=0
+while i<center_data.shape[0]:
+    while count<=CLUSTER_SIZE:
+        # ax = plt.axes(projection='3d')
+        if i+CLUSTER_SIZE>center_data.shape[0]:
+            xdata = center_data[i:-1,0]
+            ydata = center_data[i:-1,1]
+            zdata = center_data[i:-1,2]
+        else:
+            xdata = center_data[i:i+CLUSTER_SIZE,0]
+            ydata = center_data[i:i+CLUSTER_SIZE,1]
+            zdata = center_data[i:i+CLUSTER_SIZE,2]
+        count+=CLUSTER_SIZE
+        pt_cld=pt_cld_clusters[clst]
+        points = np.array(pt_cld['pos'])
+        points_filt = reject_outliers_2d(points)
+        data = np.concatenate((xdata[:, np.newaxis], 
+                       ydata[:, np.newaxis], 
+                       zdata[:, np.newaxis]), 
+                      axis=1)
+
+        # Perturb with some Gaussian noise
+        data += np.random.normal(size=data.shape) * 0.4
+        
+        # Calculate the mean of the points, i.e. the 'center' of the cloud
+        datamean = data.mean(axis=0)
+        
+        # Do an SVD on the mean-centered data.
+        uu, dd, vv = np.linalg.svd(data - datamean)
+        
+        # Now vv[0] contains the first principal component, i.e. the direction
+        # vector of the 'best fit' line in the least squares sense.
+        
+        # Now generate some points along this best fit line, for plotting.
+        
+        # I use -7, 7 since the spread of the data is roughly 14
+        # and we want it to have mean 0 (like the points we did
+        # the svd on). Also, it's a straight line, so we only need 2 points.
+        linepts = vv[0] * np.mgrid[-7:7:2j][:, np.newaxis]
+        
+        # shift by the mean to get the line in the right place
+        linepts += datamean
+        
+        
+        fig = plt.figure()
+        ax = plt.axes(projection='3d')
+        # ax.view_init(ax.azim, ax.elev)
+        ax.scatter3D(xdata, ydata, zdata, c=zdata, cmap='Greens');
+        ax.plot3D(*linepts.T)
+        ax.scatter3D(points_filt[:,0], points_filt[:,1], points_filt[:,2], c=points_filt[:,2], cmap='Reds');
+
+        ax.quiver(xdata,ydata,zdata,cam_look_vectors[:,:,0].reshape(-1,1)[i:i+CLUSTER_SIZE],\
+                  cam_look_vectors[:,:,1].reshape(-1,1)[i:i+CLUSTER_SIZE],\
+                      cam_look_vectors[:,:,2].reshape(-1,1)[i:i+CLUSTER_SIZE],\
+                          length=0.1, normalize=False)
+        plt.show()
+        i+=CLUSTER_SIZE
+    clst+=1
+    count=0
