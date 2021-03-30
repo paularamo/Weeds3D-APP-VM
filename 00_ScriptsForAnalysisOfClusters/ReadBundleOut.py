@@ -11,7 +11,16 @@ from collections import defaultdict
 import os
 import matplotlib.pyplot as plt
 from pyntcloud import PyntCloud
+import argparse 
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-fname", "--filename", default = '/home/azureuser/SfM_Core/calibration/BALL1METER-B1-GX010173.MP4', help = "Path of file to extract frames")
+parser.add_argument("-dst", "--destpath", default = '/home/azureuser/SfM_Core/calibration/BALL1METER-B1-GX010173', help = "Path of destination folder to store frames")
+parser.add_argument("-calib", "--calibfile",default = '/home/azureuser/SfM_Core/calibration/GP24667519-CALIB-02-GX010170.npz', help="Path of calibration file you want to use")
+parser.add_argument("-imwidth", "--imgwidth", default=2160, help="Image Width")
+parser.add_argument("-imgap", "--imagegap", default=10, help="Default gap between frames")
+args = parser.parse_args() 
+  
 CLUSTER_SIZE=20
 root_dir='D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/ClusteringExp/'
 actual_dir = root_dir+str(CLUSTER_SIZE)

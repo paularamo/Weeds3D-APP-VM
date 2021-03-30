@@ -1,19 +1,31 @@
-# select and undistort
+#!/usr/bin/env python3
 import cv2, sys
 import numpy as np
 import time
 import os
+import argparse 
 
-filename = 'D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/Videos/alpha_10_02_2020/GH010136.MP4'
-#Input the number of board images to use for calibration (recommended: ~20)
-dst_folder='D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/ImageSeq/'+\
-    'alpha_10_02_2020/GH010136'
+parser = argparse.ArgumentParser()
+parser.add_argument("-fname", "--filename", default = '/home/azureuser/SfM_Core/calibration/BALL1METER-B1-GX010173.MP4', help = "Path of file to extract frames")
+parser.add_argument("-dst", "--destpath", default = '/home/azureuser/SfM_Core/calibration/BALL1METER-B1-GX010173', help = "Path of destination folder to store frames")
+parser.add_argument("-calib", "--calibfile",default = '/home/azureuser/SfM_Core/calibration/GP24667519-CALIB-02-GX010170.npz', help="Path of calibration file you want to use")
+parser.add_argument("-imwidth", "--imgwidth", default=2160, help="Image Width")
+parser.add_argument("-imgap", "--imagegap", default=10, help="Default gap between frames")
+args = parser.parse_args() 
+
+#filename = '/home/azureuser/SfM_Core/calibration/BALL1METER-B1-GX010173.MP4'
+#dst_folder='/home/azureuser/SfM_Core/calibration/BALL1METER-B1-GX010173'
+filename = args.filename 
+dst_folder =  args.destpath 
+   
 if not os.path.exists(dst_folder):
     os.makedirs(dst_folder)
 
 # n_boards=500
 #Image resolution
-image_size = (1920, 1080)
+image_size=(int(args.imgwidth*(16/9)), int(args.imgwidth))
+target_image_size = (1920, 1080)
+#image_size = (3840, 2160)
 
 def selectframe(current_frame, gap):
     print('-----------------------------------------------------------------')
@@ -56,18 +68,19 @@ def ImageCollect(filename):
                 height = image.shape[0]
                 size = (int(width), int(height))
                 current_frame = video.get(cv2.CAP_PROP_POS_FRAMES)
-                try:
-                    cv2.imshow('Video', image)
-                except:
-                    continue
+               # try:
+                 #k   cv2.imshow('Video', image)
+                #kexcept:
+                    #continue
                 k = cv2.waitKey(int(FrameDuration)) #You can change the playback speed here
-                if selectframe(current_frame, 10):
+                if selectframe(current_frame, int(args.imagegap)):
                     collected_images += 1
                     # if not os.path.exists(dst_folder+'/Stream_Image' + str(collected_images) + '.png'):
                     #     cv2.imwrite(dst_folder+'/Stream_Image' + str(collected_images) + '.jpg', image) #'Calibration_Image'
                     dst = cv2.undistort(image, intrinsic_matrix, distCoeff, None)
-                    if not os.path.exists(dst_folder+'/Undistorted'+str(collected_images).zfill(4) +'.jpg'):
-                        cv2.imwrite(dst_folder+'/UndistortedImg' + str(collected_images).zfill(4) + '.jpg', dst) #'Calibration_Image'
+                    dst = cv2.resize(dst, target_image_size)
+                    if collected_images>12 and collected_images<(total_frames//10)-12 and not os.path.exists(dst_folder+'/Undistorted'+str(collected_images).zfill(4) +'.jpg'):
+                        cv2.imwrite(dst_folder+'/UndistortedImg' + str(collected_images-12).zfill(4) + '.jpg', dst) #'Calibration_Image'
                     print(str(collected_images) + ' images collected.')
             else: 
                 continue
@@ -83,7 +96,8 @@ def ImageCollect(filename):
 
 start = time.time()
 print('Loading data files')
-npz_calib_file = np.load('D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/Calib/calibration_data_ml.npz')
+#npz_calib_file = np.load('/home/azureuser/SfM_Core/calibration/GP24667519-CALIB-02-GX010170.npz')
+npz_calib_file = np.load(args.calibfile)
 lst = npz_calib_file.files
 distCoeff = npz_calib_file['distCoeff']
 intrinsic_matrix = npz_calib_file['intrinsic_matrix']
