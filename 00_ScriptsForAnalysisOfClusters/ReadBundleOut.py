@@ -272,6 +272,7 @@ def save_point_cloud(filename,total_cld, total_cld_col, center_data):
     None.
 
     '''
+    # os.touch(filename+'.ply')
     df=pd.DataFrame(
         # same arguments that you are passing to visualize_pcl
         data=np.vstack((np.hstack((total_cld, total_cld_col)),\
@@ -279,9 +280,9 @@ def save_point_cloud(filename,total_cld, total_cld_col, center_data):
         columns=["x", "y", "z", "red", "green", "blue"])
     df[['red','green','blue']] = df[['red','green','blue']].astype(np.uint8)
     cloud = PyntCloud(df)
-    cloud.to_file(filename+".ply")
+    cloud.to_file(root_dir+filename+".ply")
 
-def closest_to_red(colors, thresh=10):
+def closest_to_red(colors, thresh=6):
     '''
     Used to segment points with color closest to color of ball. 
     Parameters
@@ -360,7 +361,7 @@ def calc_extent_and_scale(pt_cld_clusters, cam_centers):
             cam_to_ground_distances.append(ctr[2]-mins[2])
 
         ball_indices=closest_to_red(col_filt)
-        if ball_indices[0].shape[0]>100:
+        if ball_indices[0].shape[0]>50:
             ball_points=points_filt[ball_indices]
             ball_col=col_filt[ball_indices]
             ball_points_clst.append([cl_no,ball_points,ball_col])
@@ -368,6 +369,83 @@ def calc_extent_and_scale(pt_cld_clusters, cam_centers):
             ball_maxs.append(np.amax(ball_points,axis=0))
     return cam_to_ground_distances, delta_x, delta_y, ball_points_clst, \
         ball_maxs, ball_mins
+
+def scale_clustered_clouds(pt_cld_clusters, scale_per_cluster):
+    '''
+    Generate total point cloud based on scales 
+
+    Parameters
+    ----------
+    pt_cld_clusters : TYPE
+        DESCRIPTION.
+    scale_per_cluster : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    total_cld : TYPE
+        DESCRIPTION.
+    total_cld_col : TYPE
+        DESCRIPTION.
+
+    '''
+    scaled_cld_clusters=pt_cld_clusters.copy()
+    total_cld=np.array(pt_cld_clusters[0]['pos'])
+    total_cld_col=np.array(pt_cld_clusters[0]['col'])
+    for i in range(len(pt_cld_clusters)):
+        points = np.array(pt_cld_clusters[i]['pos'])/scale_per_cluster[i]
+        scaled_cld_clusters[i]['pos']=points
+        col = np.array(pt_cld_clusters[i]['col'])
+        points_filt, col_filt =reject_outliers_2d(points,col)
+        if i>=1:
+            total_cld=np.vstack((total_cld, points_filt))
+            total_cld_col=np.vstack((total_cld_col, col_filt))
+    return total_cld, total_cld_col, scaled_cld_clusters
+
+def offset_points(cam_to_ground_distances, pt_cld_clusters):
+    '''
+    Generate offseted clusters 
+
+    Parameters
+    ----------
+    cam_to_ground_distances : TYPE
+        DESCRIPTION.
+    pt_cld_clusters : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    total_cld : TYPE
+        DESCRIPTION.
+    total_cld_col : TYPE
+        DESCRIPTION.
+    offset_cld_clusters : TYPE
+        DESCRIPTION.
+
+    '''
+    i=0
+    cls_no=0
+    offset_cld_clusters=pt_cld_clusters.copy()
+    total_cld=np.array(pt_cld_clusters[0]['pos'])
+    total_cld_col=np.array(pt_cld_clusters[0]['col'])
+    while cls_no<len(cam_to_ground_distances)/CLUSTER_SIZE:
+        while i<len(cam_to_ground_distances):
+            points = np.array(pt_cld_clusters[cls_no]['pos'])
+            col = np.array(pt_cld_clusters[cls_no]['col'])
+            # points_filt, col_filt =reject_outliers_2d(points,col)
+            points_filt, col_filt=points, col
+            if cls_no>0:
+                offset=cam_to_ground_distances[i]-\
+                    cam_to_ground_distances[i-int(np.floor(CLUSTER_SIZE/3))]
+                points_filt-=[0,0,offset]
+                offset_cld_clusters[cls_no]['pos']=points_filt
+                
+                total_cld=np.vstack((total_cld, points_filt))
+                total_cld_col=np.vstack((total_cld_col, col_filt))
+            cls_no+=1
+            i+=CLUSTER_SIZE
+    return total_cld, total_cld_col, offset_cld_clusters
+        
 
 def plot_clusterwise_max_min(minimums, maximums):
     '''
@@ -495,6 +573,8 @@ def plot_clst_3d_axes(center_data, pt_cld_clusters, CLUSTER_SIZE, cam_look_vecto
         clst+=1
         count=0
 
+
+
 bundle_reader=BundleReader(CLUSTER_SIZE,actual_dir)
 print('Fetching Bundle out files')
 bundle_reader.get_bundle_file_paths()
@@ -506,15 +586,48 @@ min_bounds, max_bounds, total_cld, total_cld_col = \
     get_min_max_bounds_for_clusters(pt_cld_clusters)
 center_data=cam_centers.reshape(cam_centers.shape[0]*cam_centers.shape[1],\
                                 cam_centers.shape[2])
+save_point_cloud('original_total_cld', total_cld, total_cld_col, center_data)
 
+print('Calculating Scales')
 cam_to_ground_distances, delta_x, delta_y, ball_points_clst, ball_maxs,\
     ball_mins = calc_extent_and_scale(pt_cld_clusters, cam_centers)
 
-scales_1meter=1/np.array(cam_to_ground_distances)
+# scales_1meter=1/np.array(cam_to_ground_distances)
+scale_clst_1 = cam_to_ground_distances[:20]
+scales_1_m=[]
+for i in range(16): 
+    scales_1_m.append(np.divide(cam_to_ground_distances[i*20:(i+1)*20],scale_clst_1))
+
+scale_per_cluster=np.mean(scales_1_m, axis=1) 
+print('Scaling and building merged cloud')
+total_cld, total_cld_col, scaled_cld_clusters=scale_clustered_clouds(pt_cld_clusters,scale_per_cluster)
+save_point_cloud('total_scaled_cld',\
+                 total_cld, total_cld_col, center_data)
+    
+print('Offsetting the clusters.')
+total_cld, total_cld_col, offset_clusters=offset_points(cam_to_ground_distances,scaled_cld_clusters)
+save_point_cloud('offseted_scaled_clds',\
+                 total_cld, total_cld_col, center_data)
+    
+
+plot_clusterwise_max_min(min_bounds, max_bounds)
+plot_cam_center_data(cam_centers, delta_x, delta_y, cam_to_ground_distances)
+#CALC for SCALED Clouds 
+min_bounds, max_bounds, _, _ = \
+    get_min_max_bounds_for_clusters(scaled_cld_clusters)
+cam_to_ground_distances, delta_x, delta_y, ball_points_clst, ball_maxs,\
+    ball_mins = calc_extent_and_scale(scaled_cld_clusters, cam_centers)
 plot_clusterwise_max_min(min_bounds, max_bounds)
 plot_cam_center_data(cam_centers, delta_x, delta_y, cam_to_ground_distances)
 # plot_clst_3d_axes(center_data, CLUSTER_SIZE, cam_look_vectors, cam_centers)
 
+#CALC FOR OFFSET
+min_bounds, max_bounds, _, _ = \
+    get_min_max_bounds_for_clusters(offset_clusters)
+cam_to_ground_distances, delta_x, delta_y, ball_points_clst, ball_maxs,\
+    ball_mins = calc_extent_and_scale(offset_clusters, cam_centers)
+plot_clusterwise_max_min(min_bounds, max_bounds)
+plot_cam_center_data(cam_centers, delta_x, delta_y, cam_to_ground_distances)
 
 
 
