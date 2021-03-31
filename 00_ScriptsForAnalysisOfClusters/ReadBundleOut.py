@@ -14,12 +14,13 @@ from pyntcloud import PyntCloud
 import argparse 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-root", "--rootdir", default = '', help = "The director containing all the clusters")
+parser.add_argument("-root", "--rootdir", default = '/home/azureuser/clustering/analysis/', help = "The director containing all the clusters")
 parser.add_argument("-csize", "--clustersize", default=20, help = "Cluster size to be assessed")
 args = parser.parse_args() 
   
 CLUSTER_SIZE=20
-root_dir='D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/ClusteringExp/'
+#root_dir='D:/00_NCSU/00_Resources/00_Datasets/PartTimePSA/ClusteringExp/'
+root_dir=args.rootdir
 actual_dir = root_dir+str(CLUSTER_SIZE)
 
 class BundleReader: 
