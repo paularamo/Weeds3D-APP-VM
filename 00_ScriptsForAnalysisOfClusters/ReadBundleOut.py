@@ -453,6 +453,20 @@ def offset_points(cam_to_ground_distances, pt_cld_clusters):
             i+=CLUSTER_SIZE
     return total_cld, total_cld_col, offset_cld_clusters
         
+def create_segmented_cloud(pt_clusters): 
+    '''
+    Generate segmented cluster by maximum voting the views in which points appear and correlating to the seg maps 
+    Parameters 
+    ----------
+    pt_clusters: list of dicts 
+        dict of the clusters read from bundle.outs 
+    Returns 
+    ----------
+    None 
+    ----------
+    '''
+     
+    pass 
 
 def plot_clusterwise_max_min(minimums, maximums):
     '''

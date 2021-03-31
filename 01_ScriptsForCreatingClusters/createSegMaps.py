@@ -10,10 +10,10 @@ import argparse
 
 from skimage.transform import resize
 from concurrent.futures import ThreadPoolExecutor
-executor = ThreadPoolExecutor(max_workers=16)
+executor = ThreadPoolExecutor(max_workers=32)
 futures = []
 
-parser = argparse.argumentparser()
+parser = argparse.ArgumentParser()
 parser.add_argument("-isize", "--inputsize", default = 1920, help = "Model frozen with max resolution of 2048x2048 pixel. Images resized to this before inference")
 parser.add_argument("-ipath", "--inputpath", default = '/home/azureuser/clustering/analysis/20/', help = "path for the clustered images")
 parser.add_argument("-opath", "--outputpath",default = '/home/azureuser/clustering/analysis/20/', help = "path for storing the output images")
@@ -21,10 +21,11 @@ parser.add_argument("-model", "--currentmodel", default="/home/azureuser/segment
 args = parser.parse_args() 
 
 # The model is currently frozen with a max input resolution of 2048x2048 pixel. Images will automatically be resized to this before inference
-current_input_size = 1920
+#current_input_size = 1920
 #im_input_path = "input/"
 #im_output_path = "output/"
 #current_model = "3_class_model_mobilenet_v3_small_v2.1/3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb"
+current_input_size = args.inputsize 
 im_input_path=args.inputpath
 im_output_path=args.outputpath
 current_model=args.currentmodel
@@ -100,7 +101,7 @@ i = 0
 os.makedirs(im_output_path, exist_ok=True)
 #os.makedirs(im_output_path_vis, exist_ok=True)
 #os.makedirs(im_output_path_vis_seg, exist_ok=True)
-for im_filename_long in glob.glob(im_input_path + '*.jpg'):
+for im_filename_long in glob.glob(im_input_path + '/*.jpg'):
     print(i)
     while(executor._work_queue.qsize()>5):
         time.sleep(0.5)
@@ -110,8 +111,8 @@ for im_filename_long in glob.glob(im_input_path + '*.jpg'):
     im_filename = ntpath.basename(im_filename_long)[0:-4]
     seg_map, prob_map = model.run(img)
     
-    a = executor.submit(imageio.imsave, im_output_path + im_filename + "_segmentation.png",(seg_map).astype(np.uint8), compress_level=3)
-    a = executor.submit(imageio.imsave, im_output_path + im_filename + "_softmax.jpg",(prob_map[:,:,(1,2,0)]*255).astype(np.uint8))
+    a = executor.submit(imageio.imsave, im_output_path+'/' + im_filename + "_segmentation.png",(seg_map).astype(np.uint8), compress_level=3)
+    #a = executor.submit(imageio.imsave, im_output_path + im_filename + "_softmax.jpg",(prob_map[:,:,(1,2,0)]*255).astype(np.uint8))
     i=i+1
     
     
