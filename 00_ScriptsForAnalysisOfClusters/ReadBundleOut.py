@@ -6,12 +6,14 @@ Created on Thu Mar  4 14:40:04 2021
 """
 import numpy as np 
 import pandas as pd
-from collections import defaultdict
 # import json, codecs
 import os
 import matplotlib.pyplot as plt
-from pyntcloud import PyntCloud
 import argparse 
+
+from pyntcloud import PyntCloud
+from collections import defaultdict
+from scipy.stats import mode
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-root", "--rootdir", default = '/home/azureuser/clustering/analysis/', help = "The director containing all the clusters")
@@ -462,11 +464,35 @@ def create_segmented_cloud(pt_clusters):
         dict of the clusters read from bundle.outs 
     Returns 
     ----------
-    None 
+    seg_clust: list of dicts 
+        dict of the segmented clusters. (col of each point updated according to the segmentation map)
     ----------
     '''
-     
-    pass 
+    seg_clust=pt_cld_clusters.copy()
+    col=np.zeros((len(clst['col'],3)))
+    for i,clst in enumerate(pt_clusters):
+        views=clst['views']
+        for j,view in enumerate(views):
+            cols=[]
+            for k in range(len(view)):
+                view_info = view[k]
+                cam_id = view_info[0]
+                sift_id = view_info[1]
+                x = view_info[2]
+                y = view_info[3]
+
+                xcv = np.abs(x+w/2)
+                ycv = np.abs(y-h/2)
+                seg = cv2.imread(actual_dir+'/'+ str(i+1) + '/' + str(cam_id+1).zfill(4)+'_segmentation.png')
+                cols.append(seg[ycv,xcv,0])
+            col_seg = mode(cols)
+            if col_seg == 0: 
+                seg_clust[i]['col'][j]=[255,0,0]
+            elif col_seg == 1: 
+                seg_clust[i]['col'][j]=[0,255,0]
+            if col_seg == 2: 
+                seg_clust[i]['col'][j]=[0,0,255]
+    return seg_clust
 
 def plot_clusterwise_max_min(minimums, maximums):
     '''
