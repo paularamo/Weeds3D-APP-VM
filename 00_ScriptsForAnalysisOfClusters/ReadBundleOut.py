@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 # import json, codecs
 import os
+import glob
 import matplotlib.pyplot as plt
 import argparse 
 import cv2
@@ -485,12 +486,13 @@ def create_segmented_cloud(pt_clusters):
 
                 xcv = int(np.abs(int(x)+1920/2))
                 ycv = int(np.abs(int(y)-1080/2))
-                if i==0:
-                    image_num=cam_id + 1
-                else:
-                    image_num=(i*CLUSTER_SIZE + cam_id + 1 - int(CLUSTER_SIZE/3))
-                seg_map_filename=actual_dir+'/'+ str(i+1) + '/' + str(image_num).zfill(4)+'_segmentation.png'
-                seg = cv2.imread(seg_map_filename)
+                # if i==0:
+                #     image_num=cam_id + 1
+                # else:
+                #     image_num=(i*CLUSTER_SIZE + cam_id - int(CLUSTER_SIZE/3))
+                # seg_map_filename=actual_dir+'/'+ str(i+1) + '/' + str(image_num).zfill(4)+'_segmentation.png'
+                segmaps = glob.glob(actual_dir + '/' + str(i+1) + '/*.png')
+                seg = cv2.imread(segmaps[cam_id])
                 cols.append(seg[ycv,xcv,0])
             col_seg = mode(cols)
             if col_seg == 0: 
