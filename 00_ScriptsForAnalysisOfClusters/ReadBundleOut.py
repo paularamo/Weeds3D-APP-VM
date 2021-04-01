@@ -10,6 +10,7 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import argparse 
+import cv2
 
 from pyntcloud import PyntCloud
 from collections import defaultdict
@@ -469,21 +470,27 @@ def create_segmented_cloud(pt_clusters):
     ----------
     '''
     seg_clust=pt_cld_clusters.copy()
-    col=np.zeros((len(clst['col'],3)))
-    for i,clst in enumerate(pt_clusters):
+    # clst_num=[1,10,11,12,13,14,15,16,17,2,3,4,5,6,7,8,9]
+    for i in range(len(pt_clusters)):
+        clst=pt_clusters[i]
         views=clst['views']
         for j,view in enumerate(views):
             cols=[]
             for k in range(len(view)):
                 view_info = view[k]
-                cam_id = view_info[0]
-                sift_id = view_info[1]
+                cam_id = int(view_info[0])
+                # sift_id = view_info[1]
                 x = view_info[2]
                 y = view_info[3]
 
-                xcv = np.abs(x+w/2)
-                ycv = np.abs(y-h/2)
-                seg = cv2.imread(actual_dir+'/'+ str(i+1) + '/' + str(cam_id+1).zfill(4)+'_segmentation.png')
+                xcv = int(np.abs(int(x)+1920/2))
+                ycv = int(np.abs(int(y)-1080/2))
+                if i==0:
+                    image_num=cam_id + 1
+                else:
+                    image_num=(i*CLUSTER_SIZE + cam_id + 1 - int(CLUSTER_SIZE/3))
+                seg_map_filename=actual_dir+'/'+ str(i+1) + '/' + str(image_num).zfill(4)+'_segmentation.png'
+                seg = cv2.imread(seg_map_filename)
                 cols.append(seg[ycv,xcv,0])
             col_seg = mode(cols)
             if col_seg == 0: 
@@ -492,7 +499,13 @@ def create_segmented_cloud(pt_clusters):
                 seg_clust[i]['col'][j]=[0,255,0]
             if col_seg == 2: 
                 seg_clust[i]['col'][j]=[0,0,255]
-    return seg_clust
+        if i==0:
+            total_cld=np.array(seg_clust[0]['pos'])
+            total_cld_col=np.array(seg_clust[0]['col'])
+        else:
+            total_cld=np.vstack((total_cld, seg_clust[i]['pos']))
+            total_cld_col=np.vstack((total_cld_col, seg_clust[i]['col']))
+    return seg_clust, total_cld, total_cld_col
 
 def plot_clusterwise_max_min(minimums, maximums):
     '''
@@ -655,7 +668,10 @@ print('Offsetting the clusters.')
 total_cld, total_cld_col, offset_clusters=offset_points(cam_to_ground_distances,scaled_cld_clusters)
 save_point_cloud('offseted_scaled_clds',\
                  total_cld, total_cld_col, center_data)
-    
+print('creating segmented clusters.')
+seg_cloud, total_cld, total_cld_col = create_segmented_cloud(offset_clusters)
+save_point_cloud('segmented_cld',\
+                 total_cld, total_cld_col, center_data)
 
 plot_clusterwise_max_min(min_bounds, max_bounds)
 plot_cam_center_data(cam_centers, delta_x, delta_y, cam_to_ground_distances)
@@ -664,6 +680,7 @@ min_bounds, max_bounds, _, _ = \
     get_min_max_bounds_for_clusters(scaled_cld_clusters)
 cam_to_ground_distances, delta_x, delta_y, ball_points_clst, ball_maxs,\
     ball_mins = calc_extent_and_scale(scaled_cld_clusters, cam_centers)
+
 plot_clusterwise_max_min(min_bounds, max_bounds)
 plot_cam_center_data(cam_centers, delta_x, delta_y, cam_to_ground_distances)
 # plot_clst_3d_axes(center_data, CLUSTER_SIZE, cam_look_vectors, cam_centers)
