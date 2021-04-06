@@ -5,7 +5,7 @@ import time
 import os
 import argparse 
 
-parser = argparse.argumentparser()
+parser = argparse.ArgumentParser()
 parser.add_argument("-fname", "--filename", default = '/home/azureuser/sfm_core/calibration/ball1meter-b1-gx010173.mp4', help = "path of file to extract frames")
 parser.add_argument("-dst", "--destpath", default = '/home/azureuser/sfm_core/calibration/ball1meter-b1-gx010173', help = "path of destination folder to store frames")
 parser.add_argument("-calib", "--calibfile",default = '/home/azureuser/sfm_core/calibration/gp24667519-calib-02-gx010170.npz', help="path of calibration file you want to use")
