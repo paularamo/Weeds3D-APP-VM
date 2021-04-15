@@ -1,9 +1,9 @@
-#FILES USED FOR CREATING CLUSTERS AND CLUSTERED POINT CLOUDS 
+# FILES USED FOR CREATING CLUSTERS AND CLUSTERED POINT CLOUDS 
 
-##RunBundler.sh 
+## RunBundler.sh 
 Default RunBundler.sh from bundler_sfm library (changes made are only the focal length TODO - focal length conversion depending on the requirement) 
 
-##SelectUndistort.py 
+## SelectUndistort.py 
 usage: SelectUndistort.py [-h] [-fname FILENAME] [-dst DESTPATH]
                           [-calib CALIBFILE] [-imwidth IMGWIDTH]
                           [-imgap IMAGEGAP]
@@ -20,18 +20,18 @@ optional arguments:
   -imgap IMAGEGAP, --imagegap IMAGEGAP
                         default gap between frames
 
-##create_clusters.bash
+## create_clusters.bash
 Copy to directory of extracted images from SelectUndistort 
 usage
 ./create_clusters.bash ~/path/to/clusters/ <CLUSTER_SIZE>
 
-##run_bundler_clustering_files.sh 
+## run_bundler_clustering_files.sh 
 Run from anywhere 
 usage 
 ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE> 
 
 
-##createSegMaps.py 
+## createSegMaps.py 
 usage: createSegMaps.py [-h] [-isize INPUTSIZE] [-ipath INPUTPATH]
                         [-opath OUTPUTPATH] [-model CURRENTMODEL]
 
@@ -47,7 +47,7 @@ optional arguments:
   -model CURRENTMODEL, --currentmodel CURRENTMODEL
                         Path for the deeplabmodel to do segmentation
 
-##run_createSegs.sh
+## run_createSegs.sh
 Run from anywhere 
 usage 
 ./run_createSegs.sh <root/dir/of/clusters/CLUSTER_SIZE> 
