@@ -52,3 +52,9 @@ Run from anywhere
 usage 
 ./run_createSegs.sh <root/dir/of/clusters/CLUSTER_SIZE> 
 
+# General Process to Create Clustered point clouds. (Manually)
+1. Run SelectUndistort.py on the proper video with proper arguments. 
+2. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
+3. run run_bundler_clustering_files.sh with proper arguments. 
+To time the cluster creation use this{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> <logfile>;  
+4. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
