@@ -76,7 +76,10 @@ If you have doubts please use SelectUndistort.py [-h]
 
 6. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
 
-7. run run_bundler_clustering_files.sh with proper arguments. 
+7. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
 To time the cluster creation use this{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> <logfile>;  
-4. source ~/.venv/tf_1/bin/activate
-5. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
+  
+8. Select the proper environment: source ~/.venv/tf_1/bin/activate
+  
+9. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
+  
