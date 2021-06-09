@@ -53,10 +53,12 @@ usage
 ./run_createSegs.sh <root/dir/of/clusters/CLUSTER_SIZE> 
 
 # General Process to Create Clustered point clouds. (Manually)
-0. source ~/.venv/python3-cv/bin/activate
-1. Run SelectUndistort.py on the proper video with proper arguments. 
-2. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
-3. run run_bundler_clustering_files.sh with proper arguments. 
+0. Be sure you have all calibration files in this path /home/azureuser/SfM_Core/calibration.
+1. Select the npz file related with the first code of the video. See this spreadsheet: https://docs.google.com/spreadsheets/d/1NdrbOobBGW19_rdzE55aWZ0WH0yAbd0cyEQQgXfmc_c/edit?usp=sharing
+2. Select the proper environment: source ~/.venv/python3-cv/bin/activate
+3. Run SelectUndistort.py on the proper video with proper arguments. 
+4. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
+5. run run_bundler_clustering_files.sh with proper arguments. 
 To time the cluster creation use this{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> <logfile>;  
 4. source ~/.venv/tf_1/bin/activate
 5. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
