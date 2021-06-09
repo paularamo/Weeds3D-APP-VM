@@ -60,20 +60,23 @@ usage
 
 2. Download the video using sudo azcopy copy as follow:
 
-    sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002.mp4" --recursive
+    sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002/GP51471258-CALI-01-GX010002.mp4" --recursive
     
 3. Select the proper environment: source ~/.venv/python3-cv/bin/activate
 
 4. Run SelectUndistort.py on the proper video with proper arguments. 
 
-SelectUndistort.py [-fname "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002.mp4"] [-dst "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002"] [-calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz] [-imwidth IMGWIDTH] [-imgap IMAGEGAP]
+SelectUndistort.py -fname "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002.mp4" -dst "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz -imwidth IMGWIDTH -imgap IMAGEGAP
 
 Note: Be sure the -dst opction has a proper folder there.
 
 If you have doubts please use SelectUndistort.py [-h]
 
-7. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
-8. run run_bundler_clustering_files.sh with proper arguments. 
+5. copy create_cruster.bash into the same destination folder of the step 4.
+
+6. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
+
+7. run run_bundler_clustering_files.sh with proper arguments. 
 To time the cluster creation use this{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> <logfile>;  
 4. source ~/.venv/tf_1/bin/activate
 5. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
