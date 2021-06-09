@@ -63,7 +63,7 @@ def generate_sas(account_name, container_name, blob_name):
                     container_name = container_name,
                     blob_name = blob_name, 
                     permission = BlobSasPermissions(read = True),
-                    expiry = datetime.utcnow() + timedelta(hours = 2))
+                    expiry = datetime.utcnow() + timedelta(hours = 72))
     sas_url = 'https://' + account_name + '.blob.core.usgovcloudapi.net/' + container_name + '/' + blob_name + '?' + sas
     return sas_url
 
