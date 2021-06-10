@@ -25,6 +25,9 @@ Copy to directory of extracted images from SelectUndistort
 usage
 ./create_clusters.bash ~/path/to/clusters/ <CLUSTER_SIZE>
 
+Fixed:  ./create_clusters.bash ~/path/to/clusters/ ~/path/to/clusters/ <CLUSTER_SIZE>
+
+
 ## run_bundler_clustering_files.sh 
 Run from anywhere 
 usage 
@@ -75,6 +78,9 @@ Note: Be sure the -dst opction has a proper folder there.
 If you have doubts please use SelectUndistort.py [-h]
 
 6. copy create_cruster.bash into the same destination folder of the step 5.
+
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
+
 
 7. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
 
