@@ -114,7 +114,7 @@ print('Starting to undistort the video....')
 print("Starting Image Collection....")
 print("Step 1: Image Collection")
 print(" ")
-ImageCollect(filename)
+imagecollect(filename)
 duration = (time.time()-float(start))/60
 
 print(' ')
