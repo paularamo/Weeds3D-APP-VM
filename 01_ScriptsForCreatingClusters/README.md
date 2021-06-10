@@ -62,7 +62,7 @@ usage
 
     sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002/GP51471258-CALI-01-GX010002.mp4" --recursive
     
-3. Move to /home/azureuser/scripts/Weeds3D-APP-VM
+3. Move to /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
     
 4. Select the proper environment: source ~/.venv/python3-cv/bin/activate
 
