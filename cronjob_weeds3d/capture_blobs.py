@@ -4,6 +4,18 @@ import keys as key
 from datetime import datetime, timedelta
 from azure.storage.blob import BlobServiceClient, BlobSasPermissions, generate_blob_sas
 
+# Contains information about the camera and state
+CALIBRATION_DICTIONARY = {'GP51471258': ['DE', 'Delaware'],
+                        'GP51457457': ['IA', 'Iowa'],
+                        'GP51451526': ['LA', 'Louisiana'],
+                        'GP51451853': ['MN', 'Minnesota'],
+                        'GP51451840': ['TX', 'Texas'],
+                        'GP51450357': ['VT', 'Vermont'],
+                        'GP51457925': ['MD', 'Maryland'],
+                        'GP51451671': ['VA', 'Virginia'],
+                        'GP24667519': ['NC', 'North Carolina'],
+                        'GP24815288': ['ML', 'Maryland']}
+
 """
     Access contents of the Azure blob storage. Write the name of the blob uploaded to the text file.
     Retrieve the most recently uploaded block blob URL.
@@ -11,6 +23,7 @@ from azure.storage.blob import BlobServiceClient, BlobSasPermissions, generate_b
     @param account_name: name of the Azure Storage account 
     @param container_name: string name of container
     @return dictionary that has name of the blob as a key, and SAS URL of the blob as the value
+    @return dictionary of name of blob as key, calibration file download link needed for analysis as value
 """
 def retrieve_blob(account_name, container_name):
     # Instantiate a BlobServiceClient using a connection string
@@ -46,6 +59,8 @@ def retrieve_blob(account_name, container_name):
             else:
                 file.write(blob_name)
                 file.write("\n")
+
+    # Based on the name of the blob, retrieve the calibration file required from Azure
     
     return blob_dictionary
 

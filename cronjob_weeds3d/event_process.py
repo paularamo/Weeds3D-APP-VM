@@ -1,6 +1,18 @@
 import subprocess
 import pandas as pd 
 
+STATE_DICTIONARY = {'NC': 'North Carolina',
+                    'MD': 'Maryland',
+                    'ML': 'Maryland',
+                    'TX': 'Texas',
+                    'DE': 'Delaware',
+                    'LA': 'Louisiana',
+                    'BLACKSTONE': 'Virginia',
+                    'VA': 'Virginia',
+                    'VT': 'Vermont',
+                    'IA': 'Iowa',
+                    'MN': 'Minnesota'}
+
 """
     Run the clustering and analysis process on the blob.
 
@@ -13,7 +25,7 @@ def run_process(blob_name, src, dest):
     subprocess.call('sudo azcopy copy ' + "\"" + src + "\"" + " " + "\"" + dest + blob_name + "\"" + " --recursive", 
                     shell = True)
     
-    # TODO: how to handle password prompt? --> pexecpt library
+    # TODO: how to handle password prompt? --> pexpect library
 
     # Run the bash script
 
