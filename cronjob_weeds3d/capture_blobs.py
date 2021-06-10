@@ -63,7 +63,7 @@ def retrieve_blob(account_name, container_name):
                 file.write(blob_name)
                 file.write("\n")
     
-    return blob_dictionary
+    return blob_dictionary, video_calibration_dictionary
 
 """
     Generates the SAS token that needs to be at the end of a blob storage URL for download.
@@ -88,8 +88,8 @@ def generate_sas(account_name, container_name, blob_name):
 
     @param blob_dictionary: dictionary with blob names and SAS URLs
 """
-def dict_to_csv(blob_dictionary):
-    with open('blobs.csv', 'w') as file:
+def dict_to_csv(blob_dictionary, csv_file):
+    with open(csv_file, 'w') as file:
         for blob in blob_dictionary.keys():
             file.write("%s,%s\n"%(blob, blob_dictionary[blob]))
 
@@ -126,5 +126,6 @@ def get_calibration_link(account_name, container_name, container_client, blob_na
 if __name__ == "__main__":
     storage_account = key.STORAGE_ACCOUNT
     container_name = key.CONTAINER_NAME
-    blob_dictionary = retrieve_blob(storage_account, container_name)
-    dict_to_csv(blob_dictionary)
+    blob_dictionary, video_calibration_dictionary = retrieve_blob(storage_account, container_name)
+    dict_to_csv(blob_dictionary, 'blobs.csv')
+    dict_to_csv(video_calibration_dictionary, 'calibration.csv')
