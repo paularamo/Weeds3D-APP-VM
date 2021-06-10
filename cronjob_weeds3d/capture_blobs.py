@@ -5,16 +5,11 @@ from datetime import datetime, timedelta
 from azure.storage.blob import BlobServiceClient, BlobSasPermissions, generate_blob_sas
 
 # Contains information about the camera and state
-CALIBRATION_DICTIONARY = {'GP51471258': ['DE', 'Delaware'],
-                        'GP51457457': ['IA', 'Iowa'],
-                        'GP51451526': ['LA', 'Louisiana'],
-                        'GP51451853': ['MN', 'Minnesota'],
-                        'GP51451840': ['TX', 'Texas'],
-                        'GP51450357': ['VT', 'Vermont'],
-                        'GP51457925': ['MD', 'Maryland'],
-                        'GP51451671': ['VA', 'Virginia'],
-                        'GP24667519': ['NC', 'North Carolina'],
-                        'GP24815288': ['ML', 'Maryland']}
+CALIBRATION_DICTIONARY = {'DE': 'GP51471258', 'IA': 'GP51457457',
+                        'LA': 'GP51451526', 'MN': 'GP51451853',
+                        'TX': 'GP51451840', 'VT': 'GP51450357',
+                        'MD': 'GP51457925', 'VA': 'GP51451671',
+                        'NC': 'GP24667519', 'ML': 'GP24815288'}
 
 """
     Access contents of the Azure blob storage. Write the name of the blob uploaded to the text file.
@@ -33,10 +28,18 @@ def retrieve_blob(account_name, container_name):
     # Collect all the blob names that are past June 1, 2021
     utc = pytz.UTC
     last_date = utc.localize(datetime(2021, 6, 1))
+
+    # Initialize a dictionary that has the name of the blob and the download link
     blob_dictionary = dict()
     for blob in container_client.list_blobs():
         if blob.last_modified > last_date:
             blob_dictionary[blob.name] = generate_sas(account_name, container_name, blob.name)
+    
+    # Initialize a dictionary that has name of the blob and the calibration download link
+    video_calibration_dictionary = dict()
+    for blob_name in blob_dictionary.keys():
+        # Based on the name of the blob, retrieve the calibration file required from Azure
+        video_calibration_dictionary[blob_name] = get_calibration_link(account_name, container_name, container_client, blob_name)
     
     # Check to see if blob file has already been processed by checking the processed file list text
     with open ('processed_blobs.txt', 'r+') as file:
@@ -59,8 +62,6 @@ def retrieve_blob(account_name, container_name):
             else:
                 file.write(blob_name)
                 file.write("\n")
-
-    # Based on the name of the blob, retrieve the calibration file required from Azure
     
     return blob_dictionary
 
@@ -91,6 +92,36 @@ def dict_to_csv(blob_dictionary):
     with open('blobs.csv', 'w') as file:
         for blob in blob_dictionary.keys():
             file.write("%s,%s\n"%(blob, blob_dictionary[blob]))
+
+"""
+    Based on the name of the blob, the proper calibration file needs to be selected.
+
+    @param account_name: name of the Azure Storage account
+    @param container_name: string name of container
+    @param container_client: ContainerClient that gives access to blobs inside container
+    @param blob_name: name of blob that needs to be downloaded
+    @return link for calibration .npz file on Azure Storage account
+"""
+def get_calibration_link(account_name, container_name, container_client, blob_name):
+    # Get the appropriate calibration file based on the blob name
+    wifi_network = ""
+    for state_name in CALIBRATION_DICTIONARY.keys():
+        if blob_name.startswith(state_name):
+            wifi_network = CALIBRATION_DICTIONARY[state_name]
+
+    calibration_file = ""
+    for blob in container_client.list_blobs():
+        if blob.name.startwith( "calibration_files/" + wifi_network):
+            calibration_file = blob.name
+
+    sas = generate_blob_sas(account_name = account_name, 
+                account_key = key.KEY_1, 
+                container_name = container_name,
+                blob_name = calibration_file, 
+                permission = BlobSasPermissions(read = True),
+                expiry = datetime.utcnow() + timedelta(hours = 72))
+    calibration_link = 'https://' + account_name + '.blob.core.usgovcloudapi.net/' + container_name + '/' + calibration_file + '?' + sas
+    return calibration_link
 
 if __name__ == "__main__":
     storage_account = key.STORAGE_ACCOUNT
