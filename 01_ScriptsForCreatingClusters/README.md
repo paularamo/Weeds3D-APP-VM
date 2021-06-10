@@ -85,7 +85,7 @@ sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-
 7. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
 
 8. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
-To time the cluster creation use this{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> <logfile>;  
+To time the cluster creation use this "{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> ~/logs/'print($1$f)';"  
   
 9. Select the proper environment: source ~/.venv/tf_1/bin/activate
   
