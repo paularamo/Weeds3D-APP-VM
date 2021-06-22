@@ -111,7 +111,7 @@ def get_calibration_link(account_name, container_name, container_client, blob_na
 
     calibration_file = ""
     for blob in container_client.list_blobs():
-        if blob.name.startwith( "calibration_files/" + wifi_network):
+        if blob.name.startswith("calibration_files/" + wifi_network):
             calibration_file = blob.name
 
     sas = generate_blob_sas(account_name = account_name, 
@@ -123,9 +123,35 @@ def get_calibration_link(account_name, container_name, container_client, blob_na
     calibration_link = 'https://' + account_name + '.blob.core.usgovcloudapi.net/' + container_name + '/' + calibration_file + '?' + sas
     return calibration_link
 
+"""
+    Get the calibration downloads
+
+    @param account_name: name of the Azure Storage account 
+    @param container_name: string name of container
+    @return dictionary of calibration file name as key and SAS download link for file
+"""
+def move_calibration_files_to_vm(account_name, container_name):
+    # Instantiate a BlobServiceClient using a connection string
+    blob_service_client = BlobServiceClient.from_connection_string(key.CONNECTION_STRING_1)
+    container_client = blob_service_client.get_container_client(container_name)
+
+    calibration_dictionary = dict()
+
+    for blob in container_client.list_blobs():
+        if blob.name.startswith("calibration_files/"):
+            calibration_link = generate_sas(account_name, container_name, blob.name)
+            calibration_name = blob.name.replace("calibration_files/", "")
+            calibration_dictionary[calibration_name] = calibration_link
+    
+    return calibration_dictionary
+
 if __name__ == "__main__":
     storage_account = key.STORAGE_ACCOUNT
     container_name = key.CONTAINER_NAME
-    blob_dictionary, video_calibration_dictionary = retrieve_blob(storage_account, container_name)
-    dict_to_csv(blob_dictionary, 'blobs.csv')
-    dict_to_csv(video_calibration_dictionary, 'calibration.csv')
+    #blob_dictionary, video_calibration_dictionary = retrieve_blob(storage_account, container_name)
+    #dict_to_csv(blob_dictionary, 'blobs.csv')
+    #dict_to_csv(video_calibration_dictionary, 'calibration.csv')
+
+    calibration_dictionary = move_calibration_files_to_vm(storage_account, container_name)
+    for item in calibration_dictionary:
+        print(item, calibration_dictionary[item])
