@@ -71,23 +71,26 @@ usage
 
 5. Run SelectUndistort.py on the proper video with proper arguments. 
 
-SelectUndistort.py -fname "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002.mp4" -dst "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz -imwidth IMGWIDTH -imgap IMAGEGAP
+python3 SelectUndistort.py -fname "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002.mp4" -dst "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz -imwidth IMGWIDTH -imgap IMAGEGAP
 
 Note: Be sure the -dst opction has a proper folder there.
 
-If you have doubts please use SelectUndistort.py [-h]
+If you have doubts please use python3 SelectUndistort.py [-h]
 
-6. copy create_cruster.bash into the same destination folder of the step 5.
+6. copy create_cluster.bash into the same destination folder of the step 5.
 
 sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
 
 
-7. Run create_clusters.bash from within the folder with extracted undistorted frames (you might need to copy the script there) 
+7. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
+Example - sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 
 
-8. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
-To time the cluster creation use this{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> <logfile>;  
+To time the cluster creation use this "{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> ~/logs/'print($1$f)';"  
+Example - sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 ; } 2> ~/logs/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023_20.log;
+
+8. Select the proper environment: source ~/.venv/tf_1/bin/activate
   
-9. Select the proper environment: source ~/.venv/tf_1/bin/activate
-  
-10. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
-  
+9. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
+  Example - createSegMaps.py -isize 3840 -ipath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -opath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -model /home/azureuser/segmentation/deeplabv3+/3_class_mobilenet_v3_small_small_v2.1/ 3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
+
+
