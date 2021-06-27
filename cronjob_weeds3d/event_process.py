@@ -52,7 +52,7 @@ def run_process(blob_name, src, dest):
 
     # Run the next over into your video path
     subprocess.call('python3 SelectUndistort.py -fname ' + blob_name + ".mp4 -dst "  + dest + "/" + key_name + "/" + blob_name +
-                    " -calib" + calibration_file + "-imwidth IMGWIDTH -imgap IMAGEGAP",
+                    " -calib " + calibration_file + " -imwidth IMGWIDTH -imgap IMAGEGAP",
                     shell = True)
 
     # Once process is finished running, add blob_name to processed_blobs.txt
