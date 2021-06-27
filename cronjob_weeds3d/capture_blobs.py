@@ -148,10 +148,6 @@ def move_calibration_files_to_vm(account_name, container_name):
 if __name__ == "__main__":
     storage_account = key.STORAGE_ACCOUNT
     container_name = key.CONTAINER_NAME
-    #blob_dictionary, video_calibration_dictionary = retrieve_blob(storage_account, container_name)
-    #dict_to_csv(blob_dictionary, 'blobs.csv')
-    #dict_to_csv(video_calibration_dictionary, 'calibration.csv')
-
-    calibration_dictionary = move_calibration_files_to_vm(storage_account, container_name)
-    for item in calibration_dictionary:
-        print(item, calibration_dictionary[item])
+    blob_dictionary, video_calibration_dictionary = retrieve_blob(storage_account, container_name)
+    dict_to_csv(blob_dictionary, 'blobs.csv')
+    dict_to_csv(video_calibration_dictionary, 'calibration.csv')
