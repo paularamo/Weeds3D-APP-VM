@@ -1,6 +1,11 @@
 import subprocess
 import pandas as pd 
 
+"""
+    Author: Shilpa Kancharla
+    Last Updated: June 26, 2021
+"""
+
 STATE_DICTIONARY = {'NC': 'North Carolina',
                     'MD': 'Maryland',
                     'ML': 'Maryland',

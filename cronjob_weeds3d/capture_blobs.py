@@ -4,6 +4,11 @@ import keys as key
 from datetime import datetime, timedelta
 from azure.storage.blob import BlobServiceClient, BlobSasPermissions, generate_blob_sas
 
+"""
+    Author: Shilpa Kancharla
+    Last Updated: June 26, 2021
+"""
+
 # Contains information about the camera and state
 CALIBRATION_DICTIONARY = {'DE': 'GP51471258', 'IA': 'GP51457457',
                         'LA': 'GP51451526', 'MN': 'GP51451853',
@@ -124,7 +129,7 @@ def get_calibration_link(account_name, container_name, container_client, blob_na
     return calibration_link
 
 """
-    Get the calibration downloads
+    Get the calibration downloads.
 
     @param account_name: name of the Azure Storage account 
     @param container_name: string name of container
