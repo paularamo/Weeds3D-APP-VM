@@ -55,6 +55,14 @@ Run from anywhere
 usage 
 ./run_createSegs.sh <root/dir/of/clusters/CLUSTER_SIZE> 
 
+# Calibration files and initial focal lenght
+
+For running the SfM-Bundler you should be sure you have the calibration file (npz) of your camera. Take a look in this list. https://docs.google.com/spreadsheets/d/1NdrbOobBGW19_rdzE55aWZ0WH0yAbd0cyEQQgXfmc_c/edit?usp=sharing
+
+With npz file you are able to calculate initial focal lenght, using this script.
+
+Try to find your State in this script, if this file or state is not there please add this such as another case in this script. 
+
 # General Process to Create Clustered point clouds. (Manually)
 0. Be sure you have all calibration files in this path /home/azureuser/SfM_Core/calibration.
 
