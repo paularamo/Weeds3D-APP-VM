@@ -89,6 +89,13 @@ If you have doubts please use python3 SelectUndistort.py [-h]
 
 sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
 
+XXXXXX. source /etc/bash.bashrc
+XXXXXX. sudo ldconfig
+XXXXXX. sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+XXXXXX. sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+
+
+
 
 7. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
 Example - sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 
