@@ -55,6 +55,14 @@ Run from anywhere
 usage 
 ./run_createSegs.sh <root/dir/of/clusters/CLUSTER_SIZE> 
 
+# Calibration files and initial focal lenght
+
+For running the SfM-Bundler you should be sure you have the calibration file (npz) of your camera. Take a look in this list. https://docs.google.com/spreadsheets/d/1NdrbOobBGW19_rdzE55aWZ0WH0yAbd0cyEQQgXfmc_c/edit?usp=sharing
+
+With npz file you are able to calculate initial focal lenght, using this script.
+
+Try to find your State in this script, if this file or state is not there please add this such as another case in this script. 
+
 # General Process to Create Clustered point clouds. (Manually)
 0. Be sure you have all calibration files in this path /home/azureuser/SfM_Core/calibration.
 
@@ -80,6 +88,13 @@ If you have doubts please use python3 SelectUndistort.py [-h]
 6. copy create_cluster.bash into the same destination folder of the step 5.
 
 sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
+
+XXXXXX. source /etc/bash.bashrc
+XXXXXX. sudo ldconfig
+XXXXXX. sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+XXXXXX. sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+
+
 
 
 7. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
