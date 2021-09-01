@@ -27,6 +27,8 @@
 
 start=$SECONDS
 
+TARGET=$1
+
 #Modificar el PATH donde estan la libreria bundler_sfm
 BASE_PATH=/home/azureuser/libraries/bundler_sfm
 
@@ -37,8 +39,7 @@ then
 fi
 
 # Ejecutable para leer la distancia focal
-#EXTRACT_FOCAL=$BASE_PATH/bin/extract_focal2.pl
-EXTRACT_FOCAL=$BASE_PATH/bin/extract_focal.pl
+EXTRACT_FOCAL=$BASE_PATH/bin/extract_focal2.pl
 
 OS=`uname -o`
 
@@ -63,12 +64,11 @@ RAY_ANGLE_THRESHOLD="2.0"
 
 # Establecer la distancia focal.
 #INIT_FOCAL="1626.7"
-#INIT_FOCAL=991.40381944
-#INIT_FOCAL=1356.8026876034 #camera ML ?NC?
-#INIT_FOCAL=1240.9273790184 #camera TX
-#INIT_FOCAL=1363.8367097156 #camera NC GREENHOUSE
-#INIT =`python -c "from math import ceil;import numpy as np; npz_calib_file = np.load('/home/azureuser/SfM_Core/calibration/GP24667519-CALIB-02-GX010170.npz');print()"`"
-INIT_FOCAL=997.34
+
+filename="${TARGET}"
+INIT_FOCAL=$(cat "$filename")
+
+
 # Read any user-provided config options
 if [ $# -eq 1 ]
 then
@@ -110,7 +110,7 @@ rm -f sift.txt
 $TO_SIFT_LIST $IMAGE_LIST > sift.txt || exit 1
 
 # Execute the SIFT commands
-sh sift.txt
+sudo sh sift.txt
 
 # Match images (can take a while)
 echo "[- Matching keypoints (this can take a while) -]"
@@ -162,13 +162,18 @@ echo "[- Done -]"
 
 echo "--run_PMVS" 
 
-Bundle2PMVS list.txt bundle/bundle.out
+Bundle2PMVS=$BASE_PATH/bin/Bundle2PMVS 
+
+$Bundle2PMVS list.txt bundle/bundle.out
 
 sh pmvs/prep_pmvs.sh
 
-pmvs2 pmvs/ pmvs_options.txt
+PMVS2=/home/azureuser/libraries/pmvs-2/program/main/pmvs2
+
+$PMVS2 pmvs/ pmvs_options.txt
 
 echo "[- Done -]"
 
 echo "Running time $(( SECONDS - start ))"
+
 
