@@ -109,5 +109,8 @@ Example - sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/coo
   
 9. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
   Example - createSegMaps.py -isize 3840 -ipath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -opath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -model /home/azureuser/segmentation/deeplabv3+/3_class_mobilenet_v3_small_small_v2.1/ 3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
+  
+  Docker:
+  https://hub.docker.com/r/aaminin/3d_imaging
 
 
