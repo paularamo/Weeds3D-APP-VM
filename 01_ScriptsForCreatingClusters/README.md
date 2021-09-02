@@ -92,7 +92,9 @@ sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-
 XXXXXX. source /etc/bash.bashrc
 XXXXXX. sudo ldconfig
 XXXXXX. sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
-XXXXXX. sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+XXXXXX. sudo sh RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+
+Run.sh
 
 
 
