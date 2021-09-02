@@ -93,8 +93,38 @@ XXXXXX. source /etc/bash.bashrc
 XXXXXX. sudo ldconfig
 XXXXXX. sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
 XXXXXX. sudo sh RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
-
+*******************************************************************************************************
 Run.sh
+
+> mkdir ~/data/videos/<STATE>, <STATE> = MD
+whatever place run this:
+
+> sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C4M-2-CALIB--GX010231.MP4?sv=2019-12-12&st=2021-09-02T21%3A10%3A19Z&se=2021-10-03T21%3A10%3A00Z&sr=b&sp=r&sig=Z455hx4UEg9ymfFe1IVSBKgQvaPZmYErSOyAdXukcf4%3D" "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231.mp4"
+
+> cd /home/azureuser/data/videos/MD
+  
+> source ~/.venv/python3-cv/bin/activate
+  
+  whatever place run this:
+> python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231.mp4" -dst "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231" -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz
+  
+> sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz
+  
+> source /etc/bash.bashrc
+> sudo ldconfig
+  
+> cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+
+> cd /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+  
+> sudo bash create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/  20
+
+  
+> cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_bundler_clustering_files.sh /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+  
+> sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering 20 /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+  
+**************************************************************
 
 
 
