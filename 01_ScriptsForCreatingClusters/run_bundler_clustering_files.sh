@@ -1,9 +1,10 @@
-#!/bin/bash 
-bundler_files=$(find $1/$2/ -name RunBundler.sh)
+#!/bin/bash
+bundler_files=$(find $1$2/ -name RunBundler.sh)
 for f in $bundler_files
 do
-cd 
+cd
 source /etc/bash.bashrc
-(cd "$(dirname $f)"; nohup ./RunBundler.sh) & 
+sudo ldconfig
+(cd "$(dirname $f)"; nohup ./RunBundler.sh $3) &
 done
 wait
