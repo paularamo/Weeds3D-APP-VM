@@ -14,7 +14,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-calib", "--calibfile",default = '/home/azureuser/sfm_core/calibration/gp24667519-calib-02-gx010170.npz', help="path of calibration file you want to use")
 args = parser.parse_args()
 
-image_size=(int(args.imgwidth*(16/9)), int(args.imgwidth))
+#image_size=(int(args.imgwidth*(16/9)), int(args.imgwidth))
 target_image_size = (1920, 1080)
 #image_size = (3840, 2160)
 
