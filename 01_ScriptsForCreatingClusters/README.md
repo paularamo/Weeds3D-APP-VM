@@ -81,7 +81,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```
    sudo azcopy copy "${SAS}" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4"
 ```
-   Example: 
+      Example: 
 ```   
    sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.mp4"
 ```
@@ -90,7 +90,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```
    cd /home/azureuser/data/videos/${STATE}
 ```   
-   Example
+      Example: 
 ```   
    cd /home/azureuser/data/videos/DE
 ```
@@ -103,7 +103,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```
    mkdir ${VIDEOFILE}
 ```
-   Example
+      Example: 
 ```   
    mkdir /home/azureuser/data/videos/DE
 ```
@@ -111,7 +111,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```
    sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4" -dst "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}" -calib "/home/azureuser/calibration_files/${CALIB}.npz" -imgap ${SUBSAMPLE}
 ```
-   Example
+      Example: 
 ```   
    sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.mp4" -dst "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064" -calib "/home/azureuser/calibration_files/GP51471258-CALI-01-GX010002.npz" -imgap 10
 ```
@@ -125,7 +125,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```
    cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
 ```
-   Example
+      Example: 
 ```   
    cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064"
 ```
@@ -141,7 +141,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```   
    sudo bash create_clusters.bash "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}/" ${CLUSTERSIZE}
 ```
-   Example with clusters of 20 images with overlapping
+      Example with clusters of 20 images with overlapping
 ```   
    sudo bash create_clusters.bash "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064/clustering" "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064/" 20
 ```
@@ -153,11 +153,13 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
 ```
    sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering  ${CLUSTERSIZE} /home/azureuser/calibration_files/${CALIB}.txt
 ```   
-   In case you want to now timing in this step use this CLI
+
+      In case you want to now timing in this step use this CLI
 ```   
    { time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> ~/logs/'print($1$f)';"  
 ```
-    Example
+
+      Example: 
 ```
    sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 ; } 2> ~/logs/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023_20.log;
 ```
