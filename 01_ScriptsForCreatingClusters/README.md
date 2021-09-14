@@ -200,9 +200,23 @@ Example:
   Example - createSegMaps.py -isize 3840 -ipath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -opath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -model /home/azureuser/segmentation/deeplabv3+/3_class_mobilenet_v3_small_small_v2.1/ 3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
 
 # General Process to Create Clustered point clouds. (Automatically)
+```
+    sudo bash run.sh "${SAS}" "${STATE}" "${CALIB}" "${VIDEOFILE}" ${CLUSTERSIZE} ${SUBSAMPLE}
+```
 
-    >  sudo bash run.sh "${SAS}" "${STATE}" "${CALIB}" "${VIDEOFILE}" ${CLUSTERSIZE} ${SUBSAMPLE}
-    
+```
+usage: run.sh [SAS] [STATE] [CALIB]
+                       [VIDEOFILE] [CLUSTERSIZE] [IMAGEGAP]
+
+optional arguments:
+    SAS, URI of Share Access Signature (Use Microsoft Azure Storage Explorer to create this)
+    STATE, Two State capital letters
+    CALIB, Calibration filename (npz format) without extension. Take a loof of the calib_spreadsheet.
+    VIDEOFILE, Video filename (mp4 format) without extension. Thi is the same Blob name into the SAS creation.
+    CLUSTERSIZE, Number of frames you want to include per cluster.
+    IMAGEGAP, Number of frames between selected image.
+```
+
 Example
     
     >  sudo bash run.sh "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D" "DE" "GP51457925-CALIB-01-GX010001" "DE-C4D-1S-CALIB-FIELD14SOY-GX010064" 20 10
