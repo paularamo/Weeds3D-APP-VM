@@ -61,8 +61,10 @@ For running the SfM-Bundler you should be sure you have the calibration file (np
 
 With npz file you are able to calculate initial focal lenght, using this script <span style="color:red">some **"init_focal_lenght.py".** text</span>, and saving the result as text file in the same folder
 
-    >  python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/${CALIB}
-    
+```
+    python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/${CALIB}
+```
+
 For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz 
     
     >  python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz
