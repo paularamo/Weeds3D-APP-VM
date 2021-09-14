@@ -59,7 +59,7 @@ usage
 
 For running the SfM-Bundler you should be sure you have the calibration file (npz) of your camera. Take a look in this list. https://docs.google.com/spreadsheets/d/1NdrbOobBGW19_rdzE55aWZ0WH0yAbd0cyEQQgXfmc_c/edit?usp=sharing
 
-With npz file you are able to calculate initial focal lenght, using this script "init_focal_lenght.py", and saving the result as text file in the same folder
+With npz file you are able to calculate initial focal lenght, using this script <span style="color:red">some **"init_focal_lenght.py".** text</span>, and saving the result as text file in the same folder
 
     >  python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/${CALIB}
     
