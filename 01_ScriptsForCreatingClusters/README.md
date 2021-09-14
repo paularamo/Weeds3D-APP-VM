@@ -4,6 +4,7 @@
 Default RunBundler.sh from bundler_sfm library (changes made are only the focal length TODO - focal length conversion depending on the requirement) 
 
 ## SelectUndistort.py 
+```
 usage: SelectUndistort.py [-h] [-fname FILENAME] [-dst DESTPATH]
                           [-calib CALIBFILE] [-imwidth IMGWIDTH]
                           [-imgap IMAGEGAP]
@@ -19,7 +20,7 @@ optional arguments:
                         image width
   -imgap IMAGEGAP, --imagegap IMAGEGAP
                         default gap between frames
-
+```
 ## create_clusters.bash
 Copy to directory of extracted images from SelectUndistort 
 usage
