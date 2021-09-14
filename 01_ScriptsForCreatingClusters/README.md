@@ -1,9 +1,14 @@
 # FILES USED FOR CREATING CLUSTERS AND CLUSTERED POINT CLOUDS 
 
 ## RunBundler.sh 
-Default RunBundler.sh from bundler_sfm library (changes made are only the focal length TODO - focal length conversion depending on the requirement) 
+Default RunBundler.sh from home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters. The requirement is the focal lenght in pixels saved in a text file.
+Environment: /etc/bash.bashrc
+```
+sudo RunBundler.sh <path/calibration/file/txt/extension>
+```
 
 ## SelectUndistort.py 
+This script creates a folder with selected and undistorted frames from a mp4 video. For selecting frames you should know the gap number inbetween frames.
 ```
 usage: SelectUndistort.py [-h] [-fname FILENAME] [-dst DESTPATH]
                           [-calib CALIBFILE] [-imwidth IMGWIDTH]
@@ -22,20 +27,24 @@ optional arguments:
                         default gap between frames
 ```
 ## create_clusters.bash
-Copy to directory of extracted images from SelectUndistort 
+Create packages of images from extracted images from SelectUndistort.py 
+Environment: /etc/bash.bashrc
+```
 usage
 ./create_clusters.bash ~/path/to/clusters/ <CLUSTER_SIZE>
-
-Fixed:  ./create_clusters.bash ~/path/to/clusters/ ~/path/to/clusters/ <CLUSTER_SIZE>
-
+```
 
 ## run_bundler_clustering_files.sh 
-Run from anywhere 
+Launch a parallel task to run the RunBundler over all created clusters. It should be copy first in the folder of interest.
+Environment: /etc/bash.bashrc
+```
 usage 
 ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE> 
-
+```
 
 ## createSegMaps.py 
+Create the labeled images running the Semantic Segmentation model in every cluster
+```
 usage: createSegMaps.py [-h] [-isize INPUTSIZE] [-ipath INPUTPATH]
                         [-opath OUTPUTPATH] [-model CURRENTMODEL]
 
@@ -50,11 +59,14 @@ optional arguments:
                         path for storing the output images
   -model CURRENTMODEL, --currentmodel CURRENTMODEL
                         Path for the deeplabmodel to do segmentation
+```
 
 ## run_createSegs.sh
-Run from anywhere 
+Launch a parallel task to run the createSegMaps.py over all created clusters. It should be copy first in the folder of interest.
+```
 usage 
 ./run_createSegs.sh <root/dir/of/clusters/CLUSTER_SIZE> 
+```
 
 # Calibration files and initial focal lenght
 
