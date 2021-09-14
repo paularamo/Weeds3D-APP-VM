@@ -158,11 +158,16 @@ Example with clusters of 20 images with overlapping
 ```   
    sudo bash create_clusters.bash "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064/clustering" "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064/" 20
 ```
-13. Copy the parallelization script into the active folder(where the frames are)
+13. Clean storage space into this folder
+```
+   sudo rm *.jpg
+```   
+
+14. Copy the parallelization script into the active folder(where the frames are)
 ```    
    cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_bundler_clustering_files.sh "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
 ```
-14. Run the SfM in all clusters
+15. Run the SfM in all clusters
 ```
    sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering  ${CLUSTERSIZE} /home/azureuser/calibration_files/${CALIB}.txt
 ```   
@@ -177,15 +182,15 @@ Example:
    sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 ; } 2> ~/logs/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023_20.log;
 ```
 
-15. Copy the permissions_pmvs script into the active folder(where the frames are)
+16. Copy the permissions_pmvs script into the active folder(where the frames are)
 ```
    cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/permissions_pmvs.sh "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
 ```
-16. Give permission for all "pmvs" subfolders in the clustering folder
+17. Give permission for all "pmvs" subfolders in the clustering folder
 ```
    sudo ./permissions_pmvs.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering  ${CLUSTERSIZE}
 ```
-17. Select the proper environment to run Semantic Segmentation Model 
+18. Select the proper environment to run Semantic Segmentation Model 
 ```
    source ~/.venv/tf_1/bin/activate
 ```
