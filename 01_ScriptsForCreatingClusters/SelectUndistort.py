@@ -87,7 +87,8 @@ def ImageCollect(filename):
                     #     cv2.imwrite(dst_folder+'/stream_image' + str(collected_images) + '.jpg', image) #'calibration_image'
                     dst = cv2.undistort(image, intrinsic_matrix, distCoeff, None)
                     dst = cv2.resize(dst, target_image_size)
-                    if collected_images>12 and collected_images<(total_frames//10)-12 and not os.path.exists(dst_folder+'/undistorted'+str(collected_images).zfill(4) +'.jpg'):
+                    #if collected_images>12 and collected_images<(total_frames//10)-12 and not os.path.exists(dst_folder+'/undistorted'+str(collected_images).zfill(4) +'.jpg'):
+                    if not os.path.exists(dst_folder+'/undistorted'+str(collected_images).zfill(4) +'.jpg'):
                         cv2.imwrite(dst_folder+'/undistortedimg' + str(collected_images-12).zfill(4) + '.jpg', dst) #'calibration_image'
                     print(str(collected_images) + ' images collected.')
             else:
@@ -125,11 +126,11 @@ for item in lst:
 
 print('------------------------------------------------------------')
 
-fl_filename = args.calibfile[:-4] + '.txt'
-with open(fl_filename, 'w+') as f:
-	f.write(str(focal_length_px))
-	print("Saving a text file")
-	print("-------------------------------------------------------------")
+#fl_filename = args.calibfile[:-4] + '.txt'
+#with open(fl_filename, 'w+') as f:
+#	f.write(str(focal_length_px))
+#	print("Saving a text file")
+#	print("-------------------------------------------------------------")
 
 
 npz_calib_file.close()
