@@ -185,7 +185,7 @@ Example:
 
     >  sudo bash run.sh "${SAS}" "${STATE}" "${CALIB}" "${VIDEOFILE}" ${CLUSTERSIZE} ${SUBSAMPLE}
     
-    Example
+Example
     
     >  sudo bash run.sh "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D" "DE" "GP51457925-CALIB-01-GX010001" "DE-C4D-1S-CALIB-FIELD14SOY-GX010064" 20 10
 
