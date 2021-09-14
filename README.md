@@ -40,6 +40,15 @@ This open-sourced software platform uses multiple overlapping images from differ
 
 ## Structure from Motion
 
+Based on [2], [3], and [4] we have explored differente options for reduce the computational time than SfM technique requires. In the next image you could see these steps:
 
+1) Video/metadata collection: Camara+Tablet+APP.
+2) Blob Storage receives all videos and metadata.
+3) Ubunutu Virtual Machine:
+	- Download the video from BlobStorage
+	- Split the video into frames and create undistorted images using the camera calibration file.
+	- Create clusters with and especific CLUSTERSIZE with 30% of overlapping with the next cluster.
+	- Run the Complete SfM pipeline [2] [3], in each cluster. This tasks is running in parallel for all clusters. Recording the video at 60fps, walking at 50 bpm, creating cluster of 20 images/cluster, and selecting 1 frame every 10 frames we are reducing the computation time in 90%.
+	- Run the Semantic Segmentation Model over each cluster, also in parallel.
 
 ![](https://lh4.googleusercontent.com/2LDdM7vl5IU3USp6xfXdvYsFoF2y8aAnZ9AmH8yiWsvGUCOIr6uuFkHarmtJgTwdoe_R0v4OisI7ejmyoOD_RFDmG2GX9BasAgoD2G75wb0Vm6zUpTuiVuMeMuA7V93JIaHbf8bx=s0)
