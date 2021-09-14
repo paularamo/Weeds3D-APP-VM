@@ -93,7 +93,7 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
    Example
 ```   
    cd /home/azureuser/data/videos/DE
-
+```
 4. Active the environment for CV and python 3
 ```    
    source ~/.venv/python3-cv/bin/activate
