@@ -64,16 +64,24 @@ With npz file you are able to calculate initial focal lenght, using this script.
 Try to find your State in this script, if this file or state is not there please add this such as another case in this script. 
 
 # General Process to Create Clustered point clouds. (Manually)
-0. Be sure you have all calibration files in this path /home/azureuser/SfM_Core/calibration.
+
+0. Be sure you have all calibration files in this path /home/azureuser/calibration_files.
 
 1. Select the npz file related with the first code of the video. 
     See this spreadsheet: https://docs.google.com/spreadsheets/d/1NdrbOobBGW19_rdzE55aWZ0WH0yAbd0cyEQQgXfmc_c/edit?usp=sharing
 
 2. Download the video using sudo azcopy copy as follow:
 
-    sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002/GP51471258-CALI-01-GX010002.mp4" --recursive
-    
-3. Move to /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+>  sudo azcopy copy "${SAS}" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4"
+
+   Example: 
+>  sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002/GP51471258-CALI-01-GX010002.mp4" --recursive
+
+3. Go to active folder
+
+>  cd /home/azureuser/data/videos/${STATE}
+
+5. Move to /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
     
 4. Select the proper environment: source ~/.venv/python3-cv/bin/activate
 
