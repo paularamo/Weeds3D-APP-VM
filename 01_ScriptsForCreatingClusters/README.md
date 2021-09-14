@@ -78,11 +78,13 @@ For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz
     See this spreadsheet: https://docs.google.com/spreadsheets/d/1NdrbOobBGW19_rdzE55aWZ0WH0yAbd0cyEQQgXfmc_c/edit?usp=sharing
 
 2. Download the video using sudo azcopy copy as follow:
-
-   >  sudo azcopy copy "${SAS}" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4"
-
+```
+   sudo azcopy copy "${SAS}" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4"
+```
    Example: 
-   >  sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.mp4"
+```   
+   sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.mp4"
+```
 
 3. Go to active folder
 
