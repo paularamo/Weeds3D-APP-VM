@@ -63,7 +63,7 @@ With npz file you are able to calculate initial focal lenght, using this script 
 
     >  python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/${CALIB}
     
-    For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz 
+For Example the CALIB for DELAWARE is GP51457925-CALIB-01-GX010001.npz 
     
     >  python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz
 
