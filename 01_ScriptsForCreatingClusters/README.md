@@ -65,6 +65,8 @@ Try to find your State in this script, if this file or state is not there please
 
 # General Process to Create Clustered point clouds. (Manually)
 
+sudo bash run.sh "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D" "DE" "GP51457925-CALIB-01-GX010001" "DE-C4D-1S-CALIB-FIELD14SOY-GX010064" 20 10
+
 0. Be sure you have all calibration files in this path /home/azureuser/calibration_files.
 
 1. Select the npz file related with the first code of the video. 
@@ -72,78 +74,88 @@ Try to find your State in this script, if this file or state is not there please
 
 2. Download the video using sudo azcopy copy as follow:
 
->  sudo azcopy copy "${SAS}" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4"
+   >  sudo azcopy copy "${SAS}" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4"
 
    Example: 
->  sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002/GP51471258-CALI-01-GX010002.mp4" --recursive
+   >  sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.mp4"
 
 3. Go to active folder
 
->  cd /home/azureuser/data/videos/${STATE}
+    >  cd /home/azureuser/data/videos/${STATE}
+   
+   Example
+    >  cd /home/azureuser/data/videos/DE
 
-5. Move to /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+4. Active the environment for CV and python 3
     
-4. Select the proper environment: source ~/.venv/python3-cv/bin/activate
+    >  source ~/.venv/python3-cv/bin/activate
 
-5. Run SelectUndistort.py on the proper video with proper arguments. 
+5. Create folder named with the same video file name
 
-python3 SelectUndistort.py -fname "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002.mp4" -dst "/home/azureuser/data/videos/GP51471258-CALI-01-GX010002" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz -imwidth IMGWIDTH -imgap IMAGEGAP
+    >  mkdir ${VIDEOFILE}
 
-Note: Be sure the -dst opction has a proper folder there.
+   Example
+    >  mkdir /home/azureuser/data/videos/DE
 
-If you have doubts please use python3 SelectUndistort.py [-h]
+7. Split the video into frames
 
-6. copy create_cluster.bash into the same destination folder of the step 5.
+    >  sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}.mp4" -dst "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}" -calib "/home/azureuser/calibration_files/${CALIB}.npz" -imgap ${SUBSAMPLE}
 
-sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
+   Example
+    >  sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.mp4" -dst "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064" -calib "/home/azureuser/calibration_files/GP51471258-CALI-01-GX010002.npz" -imgap 10
 
-XXXXXX. source /etc/bash.bashrc
-XXXXXX. sudo ldconfig
-XXXXXX. sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
-XXXXXX. sudo sh RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
-*******************************************************************************************************
-Run.sh
+8. Change environment
 
-> mkdir ~/data/videos/<STATE>, <STATE> = MD
-whatever place run this:
+    >  source /etc/bash.bashrc
+    >  sudo ldconfig
 
-> sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C4M-2-CALIB--GX010231.MP4?sv=2019-12-12&st=2021-09-02T21%3A10%3A19Z&se=2021-10-03T21%3A10%3A00Z&sr=b&sp=r&sig=Z455hx4UEg9ymfFe1IVSBKgQvaPZmYErSOyAdXukcf4%3D" "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231.mp4"
+9. Copy create_clusters.bash into the active folder (where the frames are)
 
-> cd /home/azureuser/data/videos/MD
-  
-> source ~/.venv/python3-cv/bin/activate
-  
-  whatever place run this:
-> python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231.mp4" -dst "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231" -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz
-  
-> sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz
-  
-> source /etc/bash.bashrc
-> sudo ldconfig
-  
-> cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+    >  cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
 
-> cd /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
-  
-> sudo bash create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/  20
+   Example
+    >  cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064"
 
-  
-> cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_bundler_clustering_files.sh /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
-  
-> sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering 20 /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
-  
-**************************************************************
+10. Go to splited frames are (same folder mentioned before)
 
+    >  cd /home/azureuser/data/videos/${STATE}/${VIDEOFILE}
 
+11. Create the host folder for clusters
+    >  mkdir clustering${CLUSTERSIZE}
 
+12. Create the clusters: number of images per cluster is another input.
+    >  sudo bash create_clusters.bash "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering" "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}/" ${CLUSTERSIZE}
 
-7. Run from anywhere usage time ./run_bundler_clustering_files.sh <root/dir/of/clusters> <CLUSTER_SIZE>. CLUSTER_SIZE will be 40
-Example - sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 
+   Example with clusters of 20 images with overlapping
+    >  sudo bash create_clusters.bash "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064/clustering" "/home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064/" 20
 
-To time the cluster creation use this "{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> ~/logs/'print($1$f)';"  
+13. Copy the parallelization script into the active folder(where the frames are)
+    
+    >  cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_bundler_clustering_files.sh "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
+
+14. Run the SfM in all clusters
+
+    >  sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering  ${CLUSTERSIZE} /home/azureuser/calibration_files/${CALIB}.txt
+    
+    In case you want to now timing in this step use this CLI
+    >  To time the cluster creation use this "{ time  ./run_bundler_clustering_files.sh <path/to/clusters> <cluster_size> ; } 2> ~/logs/'print($1$f)';"  
 Example - sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 ; } 2> ~/logs/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023_20.log;
 
-8. Select the proper environment: source ~/.venv/tf_1/bin/activate
+
+15. Copy the permissions_pmvs script into the active folder(where the frames are)
+
+    >  cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/permissions_pmvs.sh "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
+
+16. Give permission for all "pmvs" subfolders in the clustering folder
+
+    >  sudo ./permissions_pmvs.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering  ${CLUSTERSIZE}
+
+
+17. Select the proper environment to run Semantic Segmentation Model 
+
+    >  source ~/.venv/tf_1/bin/activate
+
+************************
   
 9. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
   Example - createSegMaps.py -isize 3840 -ipath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -opath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -model /home/azureuser/segmentation/deeplabv3+/3_class_mobilenet_v3_small_small_v2.1/ 3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
