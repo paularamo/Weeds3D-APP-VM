@@ -205,8 +205,7 @@ Example:
 ```
 
 ```
-usage: run.sh [SAS] [STATE] [CALIB]
-                       [VIDEOFILE] [CLUSTERSIZE] [IMAGEGAP]
+usage: run.sh [SAS] [STATE] [CALIB] [VIDEOFILE] [CLUSTERSIZE] [IMAGEGAP]
 
 optional arguments:
     SAS, URI of Share Access Signature (Use Microsoft Azure Storage Explorer to create this)
