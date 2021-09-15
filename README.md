@@ -71,6 +71,8 @@ The second part of our deployment is partially working, [00_ScriptsForAnalysisOf
 
 ## What we are expecting to see?
 
+For more details about how we could get those results please see this [Readme.md](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/blob/master/README.md)
+
 ![](https://lh6.googleusercontent.com/5IRAd5rGZPTzngk4Lx-4hlbszb5qy5NkJgwVBSHCmJyD0OVmm1KnYt7VCr_66vSuVmlHwzfB8JnjXxGN2Cz4y83cGX69QlKEdhDGZtvHimQYtV7wDlZ-s74vmel1npmqTXtNCdL6=s0)
 
 ![](https://lh5.googleusercontent.com/yI6nZowzJ9TvRCtQ1Ki1n_XkeX0qrhjb9BDQXn5VFGUR3QeFRKn7AOJo9GmsYlUVqwdQ0AWu4lAFcYp7Aqxnnch1lpm2gDcxaYjW4bZMAK_3m0Wn6E8joGE78gGmbpCcRIhqPyIz=s0)
