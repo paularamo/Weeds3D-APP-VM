@@ -57,6 +57,7 @@ Based on [2], [3], and [4] we have explored differente options for reduce the co
 
 ## What we are expecting to see?
 
+![](https://lh6.googleusercontent.com/5IRAd5rGZPTzngk4Lx-4hlbszb5qy5NkJgwVBSHCmJyD0OVmm1KnYt7VCr_66vSuVmlHwzfB8JnjXxGN2Cz4y83cGX69QlKEdhDGZtvHimQYtV7wDlZ-s74vmel1npmqTXtNCdL6=s0)
 
 ![](https://lh5.googleusercontent.com/yI6nZowzJ9TvRCtQ1Ki1n_XkeX0qrhjb9BDQXn5VFGUR3QeFRKn7AOJo9GmsYlUVqwdQ0AWu4lAFcYp7Aqxnnch1lpm2gDcxaYjW4bZMAK_3m0Wn6E8joGE78gGmbpCcRIhqPyIz=s0)
 
