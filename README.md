@@ -84,3 +84,11 @@ For more details about how we could get those results please see this [Readme.md
 ![](https://lh3.googleusercontent.com/HAH8weRzeSHPd0quxX6_9sgLUxGXnXamoa71I5Q5EXZRfzBWB39fMAbBtcQ0_Pp1zc2u0ioTy_cKSAFjXd1xpwPh7mOrskXjCRD3hajIcrH_dXAXeDW_0ilw9HB-21m40mrjf8qb=s0)
 
 ![](https://lh6.googleusercontent.com/aVn7SuqHuZr4do5YoScN8Jtp4dWzzzBEmGJxWh4iS0dyzbm6Xpz0ypfr6yeRL6sO3Wt6rdMlNBmReJSLtqiZEeFxkpXHLJFlINgzUIPyAlBv1OaRChevlEquozMM8Xj1Z-22DcC4=s0)
+
+## Partial work for DevOps
+
+To continue the work for the full automation process please visit [cronjob_weeds3d](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/cronjob_weeds3d). This is not working yet.
+
+## VM migration
+
+If you should migrate the VM please follow this [link]()
