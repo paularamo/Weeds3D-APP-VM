@@ -194,11 +194,15 @@ Example:
 ```
    source ~/.venv/tf_1/bin/activate
 ```
-************************
+19. Copy the SS parallelization script into the active folder(where the frames are)
+```
+   cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_createSegs.sh "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
+```
+20. Run SS model in all images and all clusters  
+```
+   sudo ./run_createSegs.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering${CLUSTERSIZE}
+```
   
-9. run createSegMaps.py with proper arguments to create segmentation maps for clustered point clouds. 
-  Example - createSegMaps.py -isize 3840 -ipath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -opath /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20 -model /home/azureuser/segmentation/deeplabv3+/3_class_mobilenet_v3_small_small_v2.1/ 3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
-
 # General Process to Create Clustered point clouds. (Automatically)
 ```
     sudo bash run.sh "${SAS}" "${STATE}" "${CALIB}" "${VIDEOFILE}" ${CLUSTERSIZE} ${SUBSAMPLE}
@@ -218,7 +222,7 @@ optional arguments:
 
 Example
     
-    >  sudo bash run.sh "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C4D-1S-CALIB-FIELD14SOY-GX010064.MP4?sv=2019-12-12&st=2021-09-08T20%3A36%3A58Z&se=2021-10-09T20%3A36%3A00Z&sr=b&sp=r&sig=Xkq6phKbLPQooAmw%2BwZq8k2Kcd3aNLfwpTG4Wf76G8A%3D" "DE" "GP51457925-CALIB-01-GX010001" "DE-C4D-1S-CALIB-FIELD14SOY-GX010064" 20 10
+    >  sudo bash run.sh "https://weedsmedia2.blob.core.windows.net/weeds3d/DE-CE1-202-CALIB-202-GX010042.MP4?sv=2019-12-12&st=2021-09-15T14%3A34%3A47Z&se=2021-10-16T14%3A34%3A00Z&sr=b&sp=r&sig=ugGPRHCEhOtyhjZpw2t1cmSOTtWPS3xRqqchA6nPwho%3D" "DE" "GP51457925-CALIB-01-GX010001" "DE-CE1-202-CALIB-202-GX010042" 20 10
 
 
 
