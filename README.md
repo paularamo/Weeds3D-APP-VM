@@ -50,5 +50,7 @@ Based on [2], [3], and [4] we have explored differente options for reduce the co
 	- Create clusters with and especific CLUSTERSIZE with 30% of overlapping with the next cluster.
 	- Run the Complete SfM pipeline [2] [3], in each cluster. This tasks is running in parallel for all clusters. Recording the video at 60fps, walking at 50 bpm, creating cluster of 20 images/cluster, and selecting 1 frame every 10 frames we are reducing the computation time in 90%.
 	- Run the Semantic Segmentation Model over each cluster, also in parallel.
+	- :warning: **Don't upgrade or update the VM**: It will damage the SfM intallation!
+	- :warning: **Create a new environment!! For new scripts or libraries version**
 
 ![](https://lh4.googleusercontent.com/2LDdM7vl5IU3USp6xfXdvYsFoF2y8aAnZ9AmH8yiWsvGUCOIr6uuFkHarmtJgTwdoe_R0v4OisI7ejmyoOD_RFDmG2GX9BasAgoD2G75wb0Vm6zUpTuiVuMeMuA7V93JIaHbf8bx=s0)
