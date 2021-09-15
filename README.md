@@ -52,7 +52,7 @@ Based on [2], [3], and [4] we have explored differente options for reduce the co
 	- Run the Semantic Segmentation Model over each cluster, also in parallel.
 	
 Note: 
-- :warning: **Don't upgrade or update the VM**: It will damage the SfM intallation!
+- :warning: **Don't upgrade or update the VM**: It will damage the SfM installation!
 - :warning: **Create a new environment!! For new scripts or libraries version**
 - Into the VM you could find three environments:
 	- root environmental variables: etc/bash.bashrc
