@@ -1,0 +1,2000 @@
+python3 SelectUndistort.py --hel
+ls
+python3 createSegMaps.py 
+source ~/.venv/tf_1/bin/activate
+ls
+python3 createSegMaps.py --help
+ls
+code run_bundler_clustering_files.sh 
+code run_createSegs.sh 
+sudo azcopy copy â€˜https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files?sp=ral&st=2021-03-25T19:45:07Z&se=2021-03-28T03:45:07Z&spr=https&sv=2020-02-10&sr=c&sig=nszqHTBKL5NzeqQRfHsMQg3N9BOmIsz1QnF%2FjjgNm%2Bs%3Dâ€™ â€˜/home/azureuser/testdâ€™ --recursive
+sudo azcopy copy â€˜https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files?sp=ral&st=2021-03-25T19:45:07Z&se=2021-03-28T03:45:07Z&spr=https&sv=2020-02-10&sr=c&sig=nszqHTBKL5NzeqQRfHsMQg3N9BOmIsz1QnF%2FjjgNm%2Bs%3Dâ€™ â€˜/home/azureuser/tesdâ€™ --recursive
+ls
+sudo azcopy copy â€˜https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files?sp=ral&st=2021-03-25T19:45:07Z&se=2021-03-28T03:45:07Z&spr=https&sv=2020-02-10&sr=c&sig=nszqHTBKL5NzeqQRfHsMQg3N9BOmIsz1QnF%2FjjgNm%2Bs%3Dâ€™ â€˜/home/azureuser/testd/' --recursive
+
+sudo azcopy copy â€˜https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files?sp=ral&st=2021-03-25T19:45:07Z&se=2021-03-28T03:45:07Z&spr=https&sv=2020-02-10&sr=c&sig=nszqHTBKL5NzeqQRfHsMQg3N9BOmIsz1QnF%2FjjgNm%2Bs%3Dâ€™ â€˜/home/azureuser/testd/' --recursivesudo azcopy copy â€˜https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files?sp=ral&st=2021-03-25T19:45:07Z&se=2021-03-28T03:45:07Z&spr=https&sv=2020-02-10&sr=c&sig=nszqHTBKL5NzeqQRfHsMQg3N9BOmIsz1QnF%2FjjgNm%2Bs%3Dâ€™ â€˜/home/azureuser/testd/' --recursive
+ls
+cd segmentation
+ls
+cd ..
+cd SfM_Core/
+ls
+htop
+exit
+ls
+cd clustering/
+ls
+cd analysis/
+ls
+cd 20
+ls
+cd 1
+ls
+~cd
+ls
+cd
+ls
+cd libraries
+ls
+cd 
+source ~/.venv/python3-cv/
+source ~/.venv/python3-cv/bin/activate
+deactivate 
+source ~/.venv/tf_1/bin/activate
+cd
+deactivate 
+ls
+cd scripts/
+ls
+cd Weeds3D-APP-VM/
+ls
+cd
+cd data/
+ls
+cd
+sudo ./azcopy copy --help
+./azcopy copy --help
+sudo azcopy copy --help
+cd data/
+ls
+cd ..
+ls
+cd clustering/
+ls
+cd a
+cd analysis/
+ls
+cd
+cd SfM_Core/
+ls
+cd
+cd segmentation/
+ls
+cd
+cd testd/
+ls
+cd calibration_files/
+ls
+cd
+ls
+la
+ls
+cd clustering/
+ls
+cd analysis
+ls
+cd 20
+ls
+cd 1
+ls
+cd logs/
+ls
+cat test.log 
+cat MD-301-nohup.log 
+cat MD-301-time_w_20.log 
+cat MD-301-nohup.log 
+cat MD-301-time_w_20.log 
+cat MD-301-nohup.log 
+cat MD-301-time_w_20.log 
+ls
+car alpha_GH010136_20.log 
+ls
+cd
+ls
+terminal length 0
+ls
+cd clustering
+ls
+cd analysis
+ls
+cd ..
+cd bundle
+ls
+cd ..
+ls
+cd scripts
+ls
+cd ..
+cd data
+ls
+cd Videos
+ls
+az copy --help
+ls
+cd data/
+ls
+cd cool-calibrators/
+ls
+cd 
+ls
+cd data/cool-calibrators/
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D" "~/data/cool-calibrators/" --recursive
+ls
+cd ~
+ls
+cd data/
+ls
+cd cool-calibrators/
+ls
+cd ~
+cd cool-calibrators/
+cd data/cool-calibrators/
+ls
+cd '~'
+ls
+cd data/
+ls
+cd
+cd 
+ls
+sudo azcopy copy --help
+azcopy cp "https://[account].blob.core.windows.net/[container]/[path/to/blob]?[SAS]" "/path/to/file.txt"
+sudo azcopy cp "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-03-22T14%3A44%3A34Z&se=2023-03-23T13%3A44%3A00Z&sr=c&sp=racwl&sig=qo7wV4qlyfKl1PhOM4lQR%2BBOSaZVh3jXd2Q51yummus%3D" "/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4"
+l
+cd data/cool-calibrators/
+ls
+rm -rf *
+rm -rf '~'
+ls
+cd
+pwd
+cd
+sudo azcopy cp "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-03-22T14%3A44%3A34Z&se=2023-03-23T13%3A44%3A00Z&sr=c&sp=racwl&sig=qo7wV4qlyfKl1PhOM4lQR%2BBOSaZVh3jXd2Q51yummus%3D" "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4"
+ls data/cool-calibrators/
+ls
+cd SfM_Core/calibration/
+ls
+cd
+source ~/.venv/python3-cv/bin/activate
+cd
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+python3 SelectUndistort.py --help
+vim SelectUndistort.py 
+ls
+cd libraries
+ls
+cd ..
+cd libraries2
+ls
+cd ..
+ls
+azcopy login --help
+sudo azcopy login
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.npz?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz" --recursive
+sudo azcopy copy --help
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.windows.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4" "~/data/Videos" --recursive
+cd data
+ls
+cd Videos
+ls
+cd ..
+cd SfM_Core
+ls
+cd calibration
+ls
+cd ..
+cd data/Videos
+ls
+sudo azcopy copy --help
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A01%3A52Z&sp=rt&sv=2020-06-12&sr=b&sig=SR9fB0pfQOJFx6o5X%2BJ84CJHohtNyUMjnfx8ry08UN4%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A02%3A23Z&sp=rt&sv=2020-06-12&sr=b&sig=UeQhzeEUDx6YUNe1PXokJvH0UgZUqjLTN496NUx0Ino%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A08%3A10Z&sp=rt&sv=2020-06-12&sr=b&sig=CUd5nT61wyw%2B3SDiXZxN7s1JjfMFlVD52Bc54lwVfWg%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A13%3A08Z&sp=rt&sv=2020-06-12&sr=b&sig=8k6PZfH6G826/9uRw20zneNCexvd96n6vRpbA/c7bms%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A22%3A40Z&sp=rt&sv=2020-06-12&sr=b&sig=Tbk3myREj/qrK4nJoPoA1Gfd31PdCOlWiVBnSpcm5Bg%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A23%3A15Z&sp=rt&sv=2020-06-12&sr=b&sig=vbW7tJFoFgqok09eeV1vqsvoXtZ9eiefJNaYNdkLIxo%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A28%3A54Z&sp=rt&sv=2020-06-12&sr=b&sig=cIrA2gu9PrnhXQR9jteIq04lWSjRWDApvQPyDNNa4II%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A30%3A16Z&sp=rt&sv=2020-06-12&sr=b&sig=mH/ViOC%2BoyuqBJc5zs1MLVur9GQvhvHDqZ/oP0y0Zeg%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A33%3A08Z&sp=rt&sv=2020-06-12&sr=b&sig=v6%2BSDinw8ohViUrvI5bE5ptGtXGADMhDqRNlEe%2BTuR8%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+cd data
+ls
+cd Videos
+ls
+cd ..
+cd Videos
+ls
+pwd
+ls
+cd ~
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-05T23%3A59%3A51Z&sp=rt&sv=2020-06-12&sr=b&sig=MOvRfRfCVC3NSw/V93xjanDQt3LagmCkAkWYHscQPEw%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+ls
+cd data/Videos
+ls
+rm MD-C2M-1-CALIB-1-GX010215.MP4
+ls
+azcopy login
+sudo azcopy login
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T00%3A36%3A34Z&sp=rt&sv=2020-06-12&sr=b&sig=1nuhfb8w1rRhWjYC%2BrMndtEM%2BGX4/WkFihEtP7fErh8%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A14%3A29Z&sp=rt&sv=2020-06-12&sr=b&sig=Ccs%2BtFbOGmjILJ4ATE5EIVWCsM9fN0AJr3F4g9C6EjM%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A16%3A26Z&sp=rt&sv=2020-06-12&sr=b&sig=btiaAXbpOf7CZ%2BSFTwfJoDhf%2BKUTmqLheiu3illKkdE%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A18%3A04Z&sp=rt&sv=2020-06-12&sr=b&sig=HXjs54ysJckwz7Lh1JVnnzKQfO0HRCPxi/8nWPZjdqA%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A21%3A51Z&sp=rt&sv=2020-06-12&sr=b&sig=IrlRD1LYMnehIVJUKwIqYNhaRYxc34l8q0SlscYorS8%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A22%3A48Z&sp=rt&sv=2020-06-12&sr=b&sig=QsDjMeu3ttb3ADYV3xHse1LsMYUqqEKitJixXRKnGcI%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A23%3A42Z&sp=rt&sv=2020-06-12&sr=b&sig=72EZMVXGia0LzZ8tGvAqm4cg%2B%2BL6qKn/bGO0W0MzNDo%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A25%3A02Z&sp=rt&sv=2020-06-12&sr=b&sig=8qqFmn4k4wbNUpnvEttfyJQ5QaX3XVwzfJ3ytZ3n5Lk%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A30%3A44Z&sp=rt&sv=2020-06-12&sr=b&sig=CfoVUF6xv0vgxi4%2BRz76AUrCHAU2ofc2Szz9LUxEMFI%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A31%3A42Z&sp=rt&sv=2020-06-12&sr=b&sig=DwGdpB5uP9JEr4zHjy83wkRbgSZCneAe4wRo3h%2BM1mI%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A32%3A31Z&sp=rt&sv=2020-06-12&sr=b&sig=%2B87pcDV464Cz/2%2BYpa6NWtfxGjolAoBb11QQP0GDXYA%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A34%3A53Z&sp=rt&sv=2020-06-12&sr=b&sig=IRT9jv4b5phBPQDhJ7F5GS34flise4S5cpEIg%2BAcNZk%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A35%3A51Z&sp=rt&sv=2020-06-12&sr=b&sig=WC766swzg6GQ95anAMtqJkWgGC6QahAM8AK61oMXULk%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A37%3A00Z&sp=rt&sv=2020-06-12&sr=b&sig=jzrtfPEL77zMFIa2Q9k97U2Q6/Wy%2B9clUsVd7a0oLts%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+cd data/Videos
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-06T02%3A35%3A51Z&sp=rt&sv=2020-06-12&sr=b&sig=WC766swzg6GQ95anAMtqJkWgGC6QahAM8AK61oMXULk%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+ls
+rm MD-C2M-1-CALIB-1-GX010215.MP4
+ls
+rm MD-C2M-1-CALIB-1-GX010215.MP4
+ls
+rm MD-C2M-1-CALIB-1-GX010215.MP4
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C2M-1-CALIB-1-GX010215.MP4?se=2021-06-07T14%3A50%3A01Z&sp=rt&sv=2020-06-12&sr=b&sig=cd%2BgGBzA4gV4daqVCOn6pui9q3gY%2Bv3TWciI0CJNEeY%3D" "/home/azureuser/data/Videos/MD-C2M-1-CALIB-1-GX010215.MP4" --recursive
+cd data/Videos
+ls
+rm MD-C2M-1-CALIB-1-GX010215.MP4
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-C3D-1-CALIB-DE-C3D-1-GX010029.MP4?se=2021-06-07T19%3A11%3A07Z&sp=rt&sv=2020-06-12&sr=b&sig=l/mUgGfWobs%2B1US5mCRxMLQek2wFbYGDOecFqo%2BZX0A%3D" "/home/azureuser/data/Videos/DE-C3D-1-CALIB-DE-C3D-1-GX010029.MP4" --recursive
+cd data/Videos
+ls
+ls
+cd data
+ls
+mkdir cool-calibrators
+cd cool-calibrators
+pth
+path
+cd ..
+azcopy copy "data/cool-calibrators/" "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4"
+azcopy copy "data/cool-calibrators/" sudo azcopy az https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3Dhttps://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D
+"data/cool-calibrators/" "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3Dhttps://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D"
+sudo azcopy az "data/cool-calibrators/" "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3Dhttps://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D"
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D"
+cd data
+
+cd ..
+sudo nano .bash_history 
+sudo azcopy copy "/data/cool-calibrators/" "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D"
+cd data/cool-calibrators/
+sudo azcopy copy "/data/cool-calibrators/" "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4?sv=2019-12-12&st=2021-06-04T17%3A56%3A48Z&se=2021-06-05T17%3A56%3A48Z&sr=b&sp=r&sig=ppuSaw5ZNhwQl6afMc359bnX7gpNBJqXI4JE93HUQHo%3D" "/home/data/cool-calibrators/"--recursive
+cd ..
+ls
+cd SfM_Core/
+ls
+cd calibration/
+ls
+cd ..
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.npz?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz"--recursive
+cd calibration/
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.npz?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz" --recursiveSelectUndistort.py [-h] [-fname FILENAME] [-dst DESTPATH] [-calib CALIBFILE] [-imwidth IMGWIDTH] [-imgap IMAGEGAP][A
+ls
+cd ..
+ls
+cd scripts/
+ls
+cd Weeds3D-APP-VM/
+ls
+cd 01_ScriptsForCreatingClusters/
+ls
+source ~/.venv/python3-opencv/bin/activate
+source ~/.venv/python3-cv/bin/activate
+cd ..
+cd
+python3 /scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -h
+python3 ~/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -h
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.npz?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz" --recursive
+ls
+cd data
+ls
+cd cool-calibrators/
+cd 
+ls
+cd SfM_Core/
+ls
+cd calibration/
+ls
+cd
+ls
+cd segmentation
+ls
+cd ..
+cd data
+ls
+cd SfM
+cd
+cd SfM
+ls
+cd SfM_Core/
+ls
+cd calibration
+ls
+cd SfM_Core
+ls
+cd calibration
+ls
+cd BALL1METER-B1-GX010173
+ls
+cd ...
+cd ..
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim create_clusters.bash 
+vim SelectUndistort.py 
+vim create_clusters.bash 
+vim run_bundler_clustering_files.sh 
+ps aux | grep python
+ps aux | grep run
+ps aux | python
+ps aux 
+source ~/.venv/python3-cv/bin/activate
+source ~/.venv/tf_1/bin/activate
+deactivate 
+vim run_bundler_clustering_files.sh 
+cd
+vim nohup.out 
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering3
+cd clustering40/
+l
+cd 1
+ls
+vim RunBundler.sh 
+cd ..
+cd 
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim create_clusters.bash 
+cd 
+cd SfM_Core/calibration/
+ls
+vim RunBundler.sh 
+cd
+ls
+vim nohup.out 
+cd SfM_Core/calibration/
+vim RunBundler.sh 
+cd
+cd libraries
+l
+ls
+cd ..
+cd libraries2/
+cd
+vim nohup.out 
+ps aux 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim createSegMaps.py 
+cd ..
+cd 00_ScriptsForAnalysisOfClusters/
+ls
+vim Read
+vim ReadBundleOut.py 
+cd
+quit
+exit
+ls
+cd data/cool-calibrators/
+ls
+cd '~' 
+ls
+cd data/
+ls
+vim cool-calibrators 
+cd ..
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering40/
+ls
+cd 1
+ls
+cd bundle/
+ls
+vim bundle.log 
+cd ..
+vim nohup.out 
+vim sift.txt 
+vim options.txt 
+vim list
+vim list.txt 
+vim list_keys.txt 
+cd ..
+cd 
+ls
+vim nohup.out 
+cd data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051/
+ls
+cd ..
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+cd ls
+ls
+cd clustering40/
+ls
+cd 2
+ls
+vim RunBundler.sh 
+cd 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim RunBundler.sh 
+cd 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+cd 
+vim scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/weeds3d.log 
+ls
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+sls
+ls
+cd clustering
+ls
+cd 40/
+ls
+cd 1
+ls
+cd ../..
+ls
+cd ..
+ls
+cd clustering40/
+ls
+cd 3
+ls
+vim list_tmp.txt 
+vim nohup.out 
+ps aux
+ls
+vim RunBundler.sh 
+ls
+vim list_keys.txt 
+vim undistortedimg0077.key.gz 
+clear
+cd 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim run_bundler_clustering_files.sh 
+sudo ./run_bundler_clustering_files.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+ls
+cd 
+ls
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+ls
+cd 1
+ls
+vim nohup.out 
+ls
+cd 
+ls
+vim run_bundler_clustering_files_BKP.sh 
+;s
+ls
+cd scripts/
+ls
+cd Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+cd 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim run_bundler_clustering_files.sh 
+cp run_bundler_clustering_files.sh ~/data/run_bndlr.sh
+ls
+cd
+cd data/
+ls
+cd cool-calibrators/
+ls
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering
+cd ..
+cd clustering20/
+ls
+find . -name *.txt
+find . -name *.txt -e rm -rf 
+find . -name *.txt -h
+find . -name *.txt --help
+find . -name *.txt -exec rm -rf
+find . -name *.txt -exec rm
+find --help
+find . -name *.txt -exec rm
+find --help
+find -type f -name *.txt
+find -type f -name *.txt | rm -rf 
+find -type f -name *.txt
+find -type f -name *.txt -exec rm -rf {} \; 
+sudo find -type f -name *.txt -exec rm -rf {} \; 
+ls
+find -type f -name *.txt -exec rm -rf {} \; 
+find -type f -name *.txt
+find -type d -name bundle
+find -type d -name bundle -exec rm -rf {} \; 
+sudo find -type d -name bundle -exec rm -rf {} \; 
+ls
+cd 1
+ls
+cd ..
+ls
+sudo find -type f -name *.gz -exec rm -rf {} \; 
+cd 1
+ls
+cd ..
+cd 
+cd data/cool-calibrators/
+ls
+cd ..
+ls
+vim run_bndlr.sh 
+./run_bndlr.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+sudo ./run_bndlr.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+vim run_bndlr.sh 
+sudo ./run_bndlr.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+ps aux
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+cd 1
+ls
+vim nohup.out 
+ls
+vim nohup.out 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+cd 
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering20/
+ls
+cd 1
+ls
+cd ..
+find -name *.gz
+find -name *.gz -exec rm -rf {} \;
+sudo find -name *.gz -exec rm -rf {} \;
+sudo find -name *.txt -exec rm -rf {} \;
+sudo find -name bundle -type d -exec rm -rf {} \;
+cd 1
+l;
+ls
+sudo find -name *.out -exec rm -rf {} \;
+ls
+cd
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+vim RunBundler.sh 
+vim run_bundler_clustering_files.sh 
+[- Done -]
+vim run_bundler_clustering_files.sh 
+source /etc/bash.bashrc 
+vim /etc/bash.bashrc 
+ls
+lc
+clear
+ls
+sudo ./run_bundler_clustering_files.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 
+ls
+cd
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+ls
+cd 1
+ls
+vim nohup.out 
+sudo vim nohup.out 
+cd
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+ls
+sudo find -name *.out -exec rm -rf {} \;
+sudo find -name *.gz -exec rm -rf {} \;
+sudo find -name *.txt -exec rm -rf {} \;
+sudo find -name bundle -type d -exec rm -rf {} \;
+cd 
+ls
+cd SfM_Core/
+ls
+cd calibration/
+ls
+vim run_bundler_clustering_files.sh 
+ls
+vim RunBundler.sh 
+ls
+cd 
+ls
+cd 
+ls
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+ls
+cd 1
+ls
+cd
+cd scripts/Weeds3D-APP-VM/
+git pull
+ls
+git status 
+ls
+cd 01_ScriptsForCreatingClusters/
+ls
+sudo ./run_bundler_clustering_files.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+cd 
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+cd 1
+ls
+sudo vim nohup.out 
+cd
+ls
+cd segmentation/deeplabv3+/models/3_class_model_mobilenet_v3_small_v2.1
+ls
+cd data/cool-calibrators/
+ls
+cd ..
+ls
+vim run_bndlr.sh 
+ls
+cd cool-calibrators/
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+sudo find -name bundle -type d -exec rm -rf {} \;
+sudo find -name *.txt -exec rm -rf {} \;
+sudo find -name *.out -exec rm -rf {} \;
+sudo find -name *.gz -exec rm -rf {} \;
+ls
+cd 1
+ls
+c
+cd data/cool-calibrators/
+ls
+cd ..
+ls
+sudo ./run_bndlr.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+cd cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+cd 1
+ls
+cd bundle/
+ls
+cd ..
+sudo find -name *.gz -exec rm -rf {} \;
+sudo find -name *.txt -exec rm -rf {} \;
+sudo find -name bundle -type d -exec rm -rf {} \;
+cd 1
+ls
+./RunBundler.sh 
+sudo ./RunBundler.sh 
+ls
+sudo find -name *.txt -exec rm -rf {} \;
+ls
+rm list*
+yes
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+ls
+cd 
+cd data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20/
+ls
+cd 1
+ls
+rm list.txt 
+sudo rm list.txt 
+sudo rm list_tmp.txt 
+sudo rm sift.txt 
+sudo rm undistortedimg001.key
+ls
+sudo rm undistortedimg0001.key
+ls
+source ~/.bashrc 
+source /etc/bash.bashrc 
+ls
+sudo ./RunBundler.sh 
+source ~/.bashrc 
+sudo ./RunBundler.sh 
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-CE1-302-CALIB-302-GX010051.MP4?sv=2019-12-12&st=2021-06-10T00%3A33%3A19Z&se=2021-06-11T00%3A33%3A19Z&sr=b&sp=r&sig=xfc%2FAQSla1HLC7SXPW0dFTVMh3MihKrClcLpxkiz%2FPU%3D" "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4" --recursive
+cd data/cool-calibrators/
+ls
+source ~/.venv/python3-cv/bin/activate
+cd 
+cd scripts/
+ls
+cd Weeds3D-APP-VM/
+SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd 01_ScriptsForCreatingClusters/
+SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+ls
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+mkdir "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051"
+cd  "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051"
+ls
+cd
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+sudo nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd ..
+ls
+cd ..
+ls
+sudo nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd /home/azureuser/data/cool-calibrators/
+ls
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npzimagecollect/home/azureuser/data/cool-calibrators/DE-CE1-302-CALIB-302-GX010051.MP4"
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd /home/azureuser/scripts/
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+ls
+cd data
+cd 
+cd data
+ls
+cd GoPro_testing_Image_Sequence/
+ls
+cd /home/azureuser/scripts/
+ls
+sudo nano SelectUndistort.py 
+cd Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.MP4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+ls
+cp /home/azureuser/scripts/Weeds3D-APP-VM//01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023"
+ls
+nano create_clusters.bash 
+./create_clusters.bash 
+sudo ./create_clusters.bash 
+nano create_clusters.bash 
+cd script
+cd scripts
+cd
+cd scripts/
+ls
+cd Calib/
+ls
+cd ..
+ls
+whereis create_cluster
+whereis create_clusters.bash
+cd "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023"
+nano create_clusters.bash 
+cd
+cd data
+ls
+cd alpha/
+ls
+cd GH10124
+cd GH010124
+ls
+nano create_clusters.bash
+cd "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023"
+ls
+chmod +x create_clusters.bash 
+sudo ./create_clusters.bash 
+cp /home/azureuser/data/alpha/GH010124/create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+nano create_clusters.bash 
+mkdir clustering
+sudo ./create_clusters.bash 
+cp /home/azureuser/scripts/Weeds3D-APP-VM//01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+nano create_clusters.bash 
+chmod +x create_clusters.bash 
+nano create_clusters.bash 
+cp /home/azureuser/data/alpha/GH010124/create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+sudo nano create_clusters.bash 
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023 dasdasda
+ls
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clusteringwith 20
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023 /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+ls
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023 20
+ls
+cd clustering/
+ls
+cd ..
+rm clustering/
+-rm clustering/
+sudo -rm clustering/
+ls
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023 20
+nano create_clusters.bash 
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023 20
+ls
+la .
+sudo ./create_clusters.bash /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 20
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
+ls
+cd clustering20/
+ls
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/  20
+cd ..\
+cd ..
+cd clustering
+ls
+-rm clusteriong
+ls
+cd ..
+-rm clusteriong
+ls
+sudo rm clusteriong
+sudo -rm clusteriong
+sudo -rm clustering
+sudo rm clustering
+-rm clustering
+ls
+-rm r clustering20/
+rm --help
+
+sudo ./create_clusters.bash  /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+ls
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering/ /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+ls
+cd clustering
+ls
+cd
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+sudo nano run_clustering_files.sh
+nano run_bundler_clustering_files.sh 
+{ time  ./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering40 40 ; } 2> <logfile>;
+{ time  ./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering40 40 ; } text_log.txt;
+{ time  ./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering40 40 ; } 2> weeds3d.log;
+{ time  ./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering40 40 ; } 2> weeds3d.log;}
+./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering40 40
+./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+sudo nano run_bundler_clustering_files.sh 
+./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+sudo nano run_bundler_clustering_files.sh 
+./run_bundler_clustering_files.sh /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+sudo nano run_bundler_clustering_files.sh 
+./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+cd
+cd data/alpha/
+ls
+cd GH010124
+ls
+cd
+cd data
+ls
+cd MD-301-sunny-Aida/
+ls
+cd ..
+cd GoPro_testing_Image_Sequence/
+ls
+cd ..
+cd..
+cd 
+cd scripts/
+ls
+cd Weeds3D-APP-VM/
+ls
+cd 01_ScriptsForCreatingClusters/
+ls
+nanod run_bundler_clustering_files.sh 
+nano run_bundler_clustering_files.sh 
+cd
+ls
+cd data/
+ls
+cd MD-301-sunny-Aida/
+ls
+find -h
+find --h
+find --help
+ls
+cd
+ls
+cd clustering
+cd
+cd clustering
+ls
+cd GH010137/
+ls
+cd with_overlap/
+ls
+cd 40
+ls
+nano run_bundler_clustering_files.sh 
+cd
+nano run_bundler_clustering_files.sh
+nano run_bundler_clustering_files_BKP.sh
+nano run_bundler_clustering_files.sh
+./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+cd  /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering40/
+ls
+cd 1
+ls
+cd
+cd  /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+cd clustering40/
+cd 1
+ls
+cd
+cd  /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+nano create_clusters.bash 
+cd clustering40/
+ls
+cd 1
+ls
+cd ..
+-rm clustering40
+rm -rf clustering40
+sudo rm -rf clustering40
+ls
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+ls
+cd clustering40/
+ls
+cd 1
+ls
+./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+cd 
+ls
+cd scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+nano run_bundler_clustering_files.sh 
+./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+nano run_bundler_clustering_files.sh 
+nano create_clusters.bash 
+cd  /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+
+nano create_clusters.bash 
+sudo rm -rf clustering40/
+ls
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+ls
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+nano run_bundler_clustering_files.sh 
+cd /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+sudo rm -rf clustering40/
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 40
+cd /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering20
+ls
+cd 1
+ls
+cd bundle/
+ls
+cd ..
+ls
+nano RunBlunder.sh
+cd ..
+nano RunBlunder.sh
+ls
+cd ..
+nano RunBlunder.sh
+ls
+
+cd1
+cd 1
+nano RunBlunder.sh
+ls
+sudo nano RunBundler.sh 
+cd ..
+ls
+nano create_clusters.bash 
+sudo rm -rf clustering40
+ls
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 40
+ls
+cd clustering40
+ls
+cd 1
+ls
+sudo ./RunBundler.sh 
+whereis libANN_char.so
+cd 
+sudo nano .bashrc
+/home/azureuser/libraries/bundler_sfm/bin/libANN_char.so
+sudo nano .bashrc
+cd /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering40/
+cd 2
+ls
+./RunBundler.sh 
+sudo ./RunBundler.sh 
+cd ..
+cd
+source ~./bashrc
+sudo nano ~/.bashrc
+source ~/.bashrc
+cd /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+cd clustering40/
+cd 3
+sudo ./RunBundler.sh 
+sudo nano /etc/bash.bashrc 
+source /etc/bash.bashrc
+cd ..
+cd 4
+sudo ./RunBundler.sh 
+cd
+sudo nano /etc/bash.basrc
+sudo nano /etc/bash.bashrc 
+ls
+cd libraries
+ls
+cd bundler_sfm/
+ls
+cd examples/
+ls
+cd ET
+ls
+cd ..
+cd kermit/
+ls
+sudo reboot
+cd libraries
+cd bundler_sfm/
+cd examples/
+cd 
+sudo nano ~/.bashrc
+source /etc/bash.bashrc 
+sudo ldconfig
+cd libraries/bundler_sfm/examples/kermit/
+ls
+./RunBundler.sh 
+cd ..
+cd
+cd /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering40/
+cd 4
+ls
+cd ..
+cd 5
+ls
+cd scripts
+ls
+cd Weeds3D-APP-VM
+ls
+cd 01_ScriptsForCreatingClusters/
+ls
+sudo nano create_clusters.bash 
+cd /home/azureuser/data/
+ls
+cd cool-calibrators/
+ls
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+rm -rf clustering20
+sudo rm -rf clustering20
+ls
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 20
+ls
+cd clustering20
+ls
+cd 1
+ls
+cd ..
+sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20 ; } 2> ~/logs/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023_20.log;
+sudo { time ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20  } 2> ~/logs/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023_20.log;
+ps -aux
+pgrep -lf python
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+pgrep -lf python
+ps -aux | grep python
+killall
+sudo killall
+killall python
+killall -u azureuser
+cd /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+sudo rm -rf clustering20
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 20
+cd clustering20
+cd 1
+ls
+./RunBundler.sh 
+sudo ./RunBundler.sh 
+cd ..
+sudo rm -rf clustering20
+sudo nano create_clusters.bash 
+cd ..
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 20
+cd
+cd libraries
+cd bundler_sfm/
+ls
+cd examples/
+ls
+cd ketmit
+cd kermit/
+ls
+sudo ./RunBundler.sh 
+source /etc/bash.bashrc 
+ls
+sudo rm -rf bundle/
+ls
+sudo ./RunBundler.sh 
+sudo rm -rf bundle/
+sudo reboot
+ls
+source /etc/bash.bashrc 
+cd libraries/bundler_sfm/examples/kermit/
+ls
+sudo ./RunBundler.sh 
+cd ..
+cd bin
+ls
+sudo nano /etc/bash.bashrc 
+cd ..
+cd examples/kermit/
+ls
+sudo rm -rf bundle/
+ls
+sudo ./RunBundler.sh 
+cd ..
+sudo nano /etc/bash.bashrc 
+source /etc/bash.bashrc 
+sudo ldconfig
+cd examples/kermit/
+ls
+sudo rm -rf bundle/
+sudo ./RunBundler.sh 
+cd ..
+ls
+make
+cd examples/kermit/
+ls
+sudo rm -rf bundle/
+
+ls
+source /etc/bash.bashrc 
+sudo ldconfig
+sudo ./RunBundler.sh 
+cd ..
+cd lib
+cd ann_1.1_char/
+cd lib
+ls
+make linux-g++-shared
+cd lib
+ls
+cd lib
+ls
+whereis libANN_char.so
+cd ..
+cd bin
+sudo install -m 755 libANN_char.so /usr/local/lib
+ld config
+sudo ldconfig
+cd ..
+cd examples/ker
+cd examples/kermit/
+ls
+sudo rm -rf bundle/
+ls
+sudo ./RunBundler.sh 
+ls
+sudo rm -rf bundle/
+sudo rm -rf *.gz
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.*
+ls
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.*
+ls
+deactivate
+cd 
+sudo nano /etc/bash.bashrc 
+sudo nano ~/bash.bashrc 
+sudo nano ~/.bashrc 
+cd libraries/bundler_sfm/examples/kermit/
+sudo ./RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.*
+sudo rm -rf *.gz
+sudo rm -rf bundle/
+sudo ldconfig
+source /etc/bash.bashrc 
+sudo ./RunBundler.sh 
+echo $PATH
+ls
+nano RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.*
+sudo rm -rf bundle/
+sudo rm -rf *.gz
+ls
+sudo ./RunBundler.sh 
+ls
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.*
+
+nano RunBundler.sh 
+sudo ./RunBundler.sh 
+nano RunBundler.sh 
+Bundle2PMVS list.txt bundle/bundle.out
+sh pmvs/prep_pmvs.sh
+nano RunBundler.sh 
+pmvs2 pmvs/ pmvs_options.txt
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP24667519-CALIB-02-GX010170.npz?se=2021-06-25T22%3A32%3A06Z&sp=rt&sv=2020-06-12&sr=b&sig=3tVFb4aPKwfh/qHFQUxDRj1TjQ0Q70AsbNDE/hH7zaE%3D" "/home/azureuser/calibration_files/calibration_files/GP24667519-CALIB-02-GX010170.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51450357-CALIB-01-GX010001.npz?se=2021-06-25T22%3A32%3A06Z&sp=rt&sv=2020-06-12&sr=b&sig=VAyI8rztKynUzeJY0Pw79txkfYh6n8vwtjsLE27hMv0%3D" "/home/azureuser/calibration_files/calibration_files/GP51450357-CALIB-01-GX010001.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP24667519-CALIB-02-GX010170.npz?se=2021-06-25T22%3A33%3A59Z&sp=rt&sv=2020-06-12&sr=b&sig=Vk%2BR%2BO1dzQ08Nq70oBL%2BRNlC0eBLaCLOxizte/689gg%3D" "/home/azureuser/calibration_files/calibration_files/GP24667519-CALIB-02-GX010170.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51450357-CALIB-01-GX010001.npz?se=2021-06-25T22%3A33%3A59Z&sp=rt&sv=2020-06-12&sr=b&sig=ozcgqO3GMGgMMIgUKj/VOAMgJKIQIhn8ht7v%2BOuPUwE%3D" "/home/azureuser/calibration_files/calibration_files/GP51450357-CALIB-01-GX010001.npz" --recursive
+ls
+cd calibration_files/
+ls
+cd calibration_files
+ls
+cd ..
+ls
+cd ~
+sudo azcopy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP24667519-CALIB-02-GX010170.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=1i9VZf0zlMuyYBPjoqQ4ry%2BEKeQe9sl6v49HUJBZbCQ%3D" "
+
+sudo azcopy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP24667519-CALIB-02-GX010170.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=1i9VZf0zlMuyYBPjoqQ4ry%2BEKeQe9sl6v49HUJBZbCQ%3D" "
+
+sudo azcopy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP24667519-CALIB-02-GX010170.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=1i9VZf0zlMuyYBPjoqQ4ry%2BEKeQe9sl6v49HUJBZbCQ%3D" "/home/azureuser/calibration_files/GP24667519-CALIB-02-GX010170.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP24667519-CALIB-02-GX010170.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=1i9VZf0zlMuyYBPjoqQ4ry%2BEKeQe9sl6v49HUJBZbCQ%3D" "/home/azureuser/calibration_files/GP24667519-CALIB-02-GX010170.npz" --recursive
+ls
+cd calibration_files
+ls
+cd ~
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51450357-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=iOq6Bte4INlYwlkv5uIvsDJXDhjrJxrJ4XGSgRcUnbY%3D" "/home/azureuser/calibration_files/GP51450357-CALIB-01-GX010001.npz" --recursive
+cd calibration_files
+ls
+cd ~
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51451516-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=uewMQGgzMIH0v1VkOu6cjJTuD0kScFiOXlT/c6wAuxM%3D" "/home/azureuser/calibration_files/GP51451516-CALIB-01-GX010001.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51451671-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=mcX1h%2B%2Bfa2lfMCxYKDYk0BqYkssYTll6NQIuzQX1bKA%3D" "" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51451840-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=c0bsK%2Br2WwrUS2qpw0z7JxUJ3x5yg4E/WKHXVkLSlXc%3D" "/home/azureuser/calibration_files/GP51451840-CALIB-01-GX010001.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51451853-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=d8euRM/BAiatTo1qvD/BKKePyNowONzfGh2sQYd1mOc%3D" "/home/azureuser/calibration_files/GP51451853-CALIB-01-GX010001.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51457457-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=PXmsnH72F0j9aM4CIXuANiljDTizzL2uhCvxFXrhwLw%3D" "/home/azureuser/calibration_files/GP51457457-CALIB-01-GX010001.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51457925-CALIB-01-GX010001.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=qPkz2Hl7GBs%2BptwPtclh7b0Qe4mbUYApktAK6zH8Unw%3D" "/home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=UDh7D30e7iwXB7hQ1jPSzrkS4pUe8P8oSPt%2BcdBRGcA%3D" "/home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51999104-CALIB-01-GX010009.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=7E4Ul/CVa0MGKx1GZLGEbfatU2bSdYatXxmTXog/K8U%3D" "/home/azureuser/calibration_files/GP51999104-CALIB-01-GX010009.npz" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51999104-CALIB-03-GX010010.npz?se=2021-06-25T22%3A39%3A09Z&sp=rt&sv=2020-06-12&sr=b&sig=yltmJ1gPv1Go4A7AyNuewrijUBKmuBPS0LxAJG6jGd8%3D" "/home/azureuser/calibration_files/GP51999104-CALIB-03-GX010010.npz" --recursive
+ls
+cd calibration_files
+ls
+source /etc/bash.bashrc 
+sudo ldconfig
+ls
+cd data/cool-calibrators/
+ls
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering20
+ls
+cd 1
+ls
+sudo nano RunBundler.sh 
+cd ..
+ls
+cd ..
+sudo rm -rf clustering clustering20 clustering40
+ls
+sudo nano create_clusters.bash 
+sudo ./create_clusters.bash 
+ls
+sudo nano create_clusters.bash 
+sudo ./create_clusters.bash /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering /home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/ 20
+ls
+cd clustering20/
+ls
+cd 1
+ls
+sudo nano RunBundler.sh 
+cd ..
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+./run_bundler_clustering_files.sh ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering 20
+sudo nano run_bundler_clustering_files.sh 
+cd ~/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/clustering20
+ls
+cd 1
+sudo ./RunBundler.sh 
+sudo nano RunBundler.sh 
+Bundle2PMVS list.txt bundle/bundle.out
+sudo Bundle2PMVS list.txt bundle/bundle.out
+Bundle2PMVS list.txt bundle/bundle.out
+cd ..
+cd 
+ls
+cd data
+ls
+cd MD-301-sunny-Aida/
+ls
+cd ..
+cd alpha/
+ls
+cd GH010124
+ls
+cd ..
+ls
+cd GH010125-002/
+ls
+cd ..
+ls
+cd ..
+ls
+cd Videos/
+ls
+cd ..
+cd GoPro_testing_Image_Sequence/
+ls
+cd ..
+ls
+cd clustering
+ls
+cd MD-301/
+ls
+cd with_overlap/
+ls
+cd 20
+ls
+cd 1
+ls
+sudo nano RunBundler.sh 
+cd ..
+ls
+cd scripts
+ls
+cd Calib/
+ls
+cd ..
+cd /home/azureuser/libraries/bundler_sfm/examples/ET
+ls
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.*
+ls
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+sudo nano RunBundler.sh 
+chmod +x RunBundler.sh 
+ls
+sudo ./RunBundler.sh 
+cd ..
+ls
+cd examples/
+cd ET/
+ls
+Bundle2PMVS list.txt bundle/bundle.out
+sh pmvs/prep_pmvs.sh
+pmvs2 pmvs/ pmvs_options.txt
+ls
+cd 
+ls
+cd SfM_Core/
+ls
+cd claibration
+cd calibration/
+ls
+cd
+cd scripts/
+cd Weeds3D-APP-VM/
+cd 01
+cd 01_ScriptsForCreatingClusters/
+ls
+sudo nano SelectUndistort.py 
+cd /home/azureuser/libraries/bundler_sfm/example
+cd /home/azureuser/libraries/bundler_sfm/examples
+cd 
+sudo apt install -y sshfs
+cd /home/azureuser/libraries/bundler_sfm/example
+cd /home/azureuser/libraries/bundler_sfm/examples
+cd kermit
+ls
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+sudo nano RunBundler.sh 
+sudo nano RunBundler_cont.sh 
+ls
+chmod +x RunBundler_v2.sh 
+sudo chmod +x RunBundler_v2.sh 
+ls
+sudo ./RunBundler.sh 
+sudo ./RunBundler_v2.sh 
+sudo nano RunBundler_v2.sh 
+sudo ./RunBundler_v2.sh 
+sudo sh RunBundler_v2.sh 
+sudo nano RunBundler_v2.sh
+sudo sh RunBundler_v2.sh 
+sudo nano RunBundler_v2.sh
+sudo sh RunBundler_v2.sh 
+sudo chmod +x RunBundler_v2.sh 
+chmod +x RunBundler_v2.sh 
+sudo sh -x RunBundler_v2.sh 
+sudo nano RunBundler_v2.sh
+bash -v RunBundler_v2.sh 
+cd ..
+cd ET/
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+bash RunBundler.sh 
+ls
+cd calibration files
+cd calibration_files/
+ls
+cd.. 
+cd ..
+su -
+visudo
+ls
+cd calibration_files
+ls
+sudo
+visudo
+sudo visudo
+start
+start .
+nautilus .
+ls
+sudo visudo
+ls
+cd calibration_files
+ls
+which python
+python --version
+python event_process.py
+cd libraries
+ls
+pip install pandas
+ls
+cd ..
+python event_process.py
+ls
+python event_process.py
+ls
+rm event_process.py
+ls
+python event_process.py
+cd SfM_Core
+ls
+cd calibration
+ls
+pwd
+cd ~
+ls
+rm event_process.py
+ls
+python3 event_process.py
+pwd
+ls
+
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/videos/DE/GP51471258-CALI-01-GX010002.mp4" --recursive
+cd /home/azureuser/data
+ls
+cd Videos
+ls
+mkdir DE
+cd DE
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/calibration_files/GP51471258-CALIB-01-GX010002.mp4?sv=2019-12-12&st=2021-06-04T18%3A21%3A44Z&se=2021-06-05T18%3A21%3A44Z&sr=b&sp=r&sig=oEFRAy5LHzBMnT64r0tw5twIhhHarrEonF1IB5L5RCY%3D" "/home/azureuser/data/Videos/DE/GP51471258-CALI-01-GX010002.mp4" --recursive
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-%20CE1-101-CALIB-101-GX010031.MP4?sv=2019-12-12&st=2021-07-08T13%3A10%3A26Z&se=2021-07-09T13%3A10%3A26Z&sr=b&sp=r&sig=KneZZFlFxBTbmttJz0E0yxNVO1ErHzASwCnUKbDH0Jg%3D" "/home/azureuser/data/Videos/DE/DE- CE1-101-CALIB-101-GX010031.mp4" --recursive
+ls
+stat 'DE- CE1-101-CALIB-101-GX010031.mp4' 
+source ~/.venv/python3-cv/bin/activate
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py /home/azureuser/data/videos/DE
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py /home/azureuser/data/Videos/DE
+ls
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031" -calib /home/azureuser/calibration_files/GP51471258-CALI-01-GX010002.npz
+sudo python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031" -calib /home/azureuser/calibration_files/GP51471258-CALI-01-GX010002.npz
+ls
+cd ..
+ls
+cd aaminin
+ls
+cd ..
+ls
+cd aaminin
+ls
+cat conversion.log 
+ls
+cat run.sh
+cron
+sudo cron
+crontab
+crontab -e
+logout
+ls
+cd data/videos/
+ls
+cd DE
+ls
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+ls
+source ~/.venv/python3-cv/bin/activate
+cd /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031/
+ls
+cd /home/azureuser/clustering/
+ls
+cd alpha/
+ls
+cd /home/azureuser/data/
+ls
+cd cool-calibrators/
+ls
+cd DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd clustering20
+ls
+cd 1
+ls
+cd ..
+cd
+ls
+cd scripts/
+ls
+cd Weeds3D-APP-VM/
+ls
+cd
+whereis capture_blob.py
+whereis capture*
+whereis capture_blobs
+whereis capture_blobs.py
+cd /data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023/
+ls
+cd ..
+cd 
+cd /home//azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz -imwidth IMGWIDTH -imgap IMAGEGAP
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+ls
+nano SelectUndistort.py 
+cd /home/azureuser/SfM_Core/
+ls
+cd calibration/
+LS
+ls
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib ~/home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd ~/data/cool-calibrators/
+ls
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+python3 SelectUndistort.py -fname "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4" -dst "/home/azureuser/data/cool-calibrators/DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023" -calib /home/azureuser/SfM_Core/calibration/GP51471258-CALI-01-GX010002.npz
+cd ~/data/cool-calibrators/
+ls
+lsattr DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4
+ls -l DE-CD1-14A1-1-CALIB-CD1-14A1-1-GX010023.mp4
+cd ~/data/videos/DE/
+ls
+cd DE-\ CE1-101-CALIB-101-GX010031/
+ls
+cd 
+cd ~/data/videos/DE/
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/DE-%20CE1-101-CALIB-101-GX010031.MP4?sv=2019-12-12&st=2021-08-25T17%3A51%3A02Z&se=2021-08-26T17%3A51%3A02Z&sr=b&sp=r&sig=YsA%2BOzMewa9Yn3kirvw61wi3OpM4ZxNwU0D%2BrN%2BqTS4%3D" "/home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031.mp4"
+ls
+cd DE-\ CE1-101-CALIB-101-GX010031/
+ls
+cd..
+cd ..
+ls -l DE-\ CE1-101-CALIB-101-GX010031.mp4
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py /home/azureuser/data/videos/DE
+ls
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/GP51471258-CALI-01-GX010002" -calib /home/azureuser/calibration_files/GP51471258-CALI-01-GX010002.npz
+ls
+pip3 list
+pip install numpy
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade numpy
+ls
+nano SelectUndistort.py 
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/D" -calib /home/azureuser/calibration_files/GP51471258-CALI-01-GX010002.npz
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+rm SelectUndistort.py 
+ls
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py /home/azureuser/data/videos/DE
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+ls
+cd DE-\ CE1-101-CALIB-101-GX010031/
+ls
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031
+ls
+sudo ./create_clusters.bash /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031/ 20
+ls
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/
+cd /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters
+ls
+cd ~/data/videos/DE/DE- CE1-101-CALIB-101-GX010031$
+cd /home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031$
+cd /home/azureuser/data/videos/DE/DE- CE1-101-CALIB-101-GX010031
+cd
+cd /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031/
+
+sudo ./create_clusters.bash /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-\ CE1-101-CALIB-101-GX010031/ 20
+nano create_clusters.bash 
+cd ..
+cd DE-CE1-101CALIB-101-GX010031/
+sudo ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/ 20
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/ 20
+ls
+mkdir clustering
+ls
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/ 20
+ls
+cd clustering/
+ls
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/clustering/ /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/ 20
+cd ..
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/clustering/ /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/ 20
+ls
+cd clustering/
+ls
+cd ..
+ls
+stat '/home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/undistortedimg0001.jpg'
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/ /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/ 20
+ls
+cd clustering/
+ls
+cd 20
+ls
+cd 1
+ls
+nano RunBundler.sh 
+cd ..
+ls
+mkdir testDE
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/testDE" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+sudo python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/testDE" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+~/.venv/python3-cv/bin/activate
+source ~/.venv/python3-cv/bin/activate
+sudo python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/testDE" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/testDE/" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+sudo python3 SelectUndistort.py -fname "DE- CE1-101-CALIB-101-GX010031.mp4" -dst "/home/azureuser/data/videos/DE/testDE/" -calib /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.npz 
+source ~/.venv/python3-cv/bin/activate
+cd /home/azureuser/data/videos/DE/testDE/
+ls
+cd /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/
+ls
+chmod +x read_txt.bash 
+ls
+sudo bash ./read_txt.bash /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt 
+cat /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+sudo bash ./read_txt.bash /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt 
+ls
+sudo nano create_clusters.bash 
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/ /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/ 20
+ls
+cd clustering/
+ls
+cd 20
+ls
+cd 1
+ls
+sudo nano RunBundler.sh 
+bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+ls
+cp -p -r -f  "/home/azureuser/libraries/bundler_sfm/examples/ET/RunBundler_v2.sh" "/home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/20/1/RunBundler_v2.sh"
+sudo cp -p -r -f  "/home/azureuser/libraries/bundler_sfm/examples/ET/RunBundler_v2.sh" "/home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/20/1/RunBundler_v2.sh"
+ls
+sudo bash RunBundler_v2.sh 
+nano RunBundler.sh 
+source ~/.bashrc
+sudo bash RunBundler_v2.sh 
+sudo ldconfig
+sudo bash RunBundler_v2.sh 
+sudo ldconfig
+source ~/.bashrc
+sudo bash RunBundler_v2.sh 
+sudo nano ~/.bash
+sudo nano ~/.bash_history 
+source /etc/bash.bashrc
+sudo ldconfig
+sudo bash RunBundler_v2.sh 
+sudo nano RunBundler_v2.sh 
+sudo bash RunBundler_v2.sh 
+sudo nano ~/.bash_history 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.*
+ls
+sudo nano ~/.bash_history 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+sudo nano RunBundler.sh 
+source /etc/bash.bashrc
+sudo ldconfig
+sudo basg ./RunBundler.sh 
+sudo bash ./RunBundler.sh 
+sudo nano RunBundler.sh 
+sudo bash ./RunBundler.sh 
+sudo nano RunBundler.sh 
+sudo bash ./RunBundler.sh 
+sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+sudo nano RunBundler.sh 
+sudo nano RunBundler_v2.sh 
+sudo bash ./RunBundler_v2.sh 
+sudo nano /etc/bash.bashrc 
+sudo nano /.bashrc 
+sudo nano ~/..bashrc 
+sudo nano ~/.bashrc 
+sudo nano ~/.bash_history 
+source /etc/bash.bashrc
+ld config
+sudo ldconfig
+sudo nano RunBundler_v2.sh 
+sudo bash ./RunBundler_v2.sh 
+Bundle2PMVS list.txt bundle/bundle.out
+sudo Bundle2PMVS list.txt bundle/bundle.out
+Bundle2PMVS list.txt bundle/bundle.out
+cd 
+sudo rm -rf /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/
+cd ~/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/20/1
+ls
+Bundle2PMVS list.txt bundle/bundle.out
+sudo Bundle2PMVS list.txt bundle/bundle.out
+Bundle2PMVS list.txt bundle/bundle.out
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+sudo nano RunBundler.sh 
+chmod +x RunBundler.sh 
+sudo chmod +x RunBundler.sh 
+sudo nano RunBundler.sh 
+sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+cd 
+ls libraries/bundler_sfm/examples/ET
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+cd libraries/bundler_sfm/examples/ET
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+source /etc/bash.bashrc
+pm
+source.bashrc
+source .bashrc
+cd 
+source
+pm
+sudo nano /etc/bash.bashrc
+source /etc/bash.bashrc
+cd libraries/bundler_sfm/examples/ET
+ls
+sudo nano RunBundler.sh 
+sudo bash ./RunBundler.sh
+source .bashrc
+source ~/.bashrc
+sudo nano  ~/.bashrc 
+source ~/.bashrc
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+sudo bash ./RunBundler.sh
+sudo ldconfig
+sudo bash RunBundler_v2.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+sudo bash RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+sudo sh RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+Bundle2PMVS list.txt bundle/bundle.out
+sudo nano RunBundler.sh 
+sudo nano /etc/.bashrc 
+sudo nano ~/.bashrc 
+cd ..
+cd bin
+ls
+./Bundle2PMVS 
+cd ..
+sudo nano /etc/bash.bashrc 
+cd examples/
+cd ET
+ls
+sudo sh RunBundler.sh 
+nano RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+sudo sh RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+nano RunBundler.sh 
+LS
+ls
+sudo sh RunBundler.sh 
+cd /data/videos/DE
+cd ~/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/1
+cd ~/data/videos/DE/
+ls
+cd DE-CE1-101CALIB-101-GX010031/
+ls
+cd clustering/
+cd 20
+cd 1
+ls
+sudo rm RunBundler.sh 
+ls
+cd ..
+ls
+rm clustering
+sudo rm clustering
+sudo rm -r clustering
+ls
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/ /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/ 20
+ls
+cd clustering/
+cd 20
+cd 1
+ls
+nano RunBundler.sh 
+sudo sh RunBundler.sh 
+sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+ls
+cd pmvs/
+ls
+sudo cd pmvs/
+cd pmvs
+sudo reboot
+cd ~/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/20/1
+ls
+cd pmvs/
+sudo pmvs
+sudo cd pmvs
+ls -l
+cd bundle/
+cd pmvs
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+cd ..
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+nano RunBundler.sh 
+sudo nano RunBundler.sh 
+sudo bash RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+ls
+cd pmvs
+su root
+/root
+pwd
+sudo stat pmvs/
+sudo stat bundle/
+cd pmvs/
+sudo nano RunBundler.sh 
+sudo reboot
+cd ~/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/20/1/pmvs
+cd ~/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering/20/
+nano RunBundler.sh 
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+nano RunBundler2.sh 
+ls
+ls -l
+sudo sh RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+ls
+cd pmvs/
+sudo chmod 775 pmvs
+cd pmvs/
+ls
+cd ..
+sudo rm -rf l*.* m*.* n*.* o*.* p*.* s*.* c*.* *.gz bundle pmvs
+ls
+sudo chmod 775 RunBundler.sh 
+nano RunBundler.sh 
+sudo nano RunBundler.sh 
+ls
+sudo sh RunBundler.sh /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+cd pmvs
+sudo chmod 775 pmvs
+cd pmvs
+ls
+cd models
+ls
+cd ..
+ls
+rm clustering/
+rm -r clustering/
+ls
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-CE1-101-CALIB-101-GX010031/ 20
+ls
+sudo bash ./create_clusters.bash /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/ 20
+ls
+cd clustering2
+cd clustering20/
+ls
+cd 1
+ls
+nano RunBundler.sh 
+cd ..
+ls
+nano run_bundler_clustering_files.sh 
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering 20 /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+nano permissions_pmvs.sh
+sudo chmod +x permissions_pmvs.sh 
+ls
+sudo ./permissions_pmvs.sh
+nano permissions_pmvs.sh
+sudo ./permissions_pmvs.sh
+cd ..
+mkdir MD
+ls
+sudo azcopy copy "https://weedsmedia.blob.core.usgovcloudapi.net/weeds3d/MD-C4M-2-CALIB--GX010231.MP4?sv=2019-12-12&st=2021-09-02T21%3A10%3A19Z&se=2021-10-03T21%3A10%3A00Z&sr=b&sp=r&sig=Z455hx4UEg9ymfFe1IVSBKgQvaPZmYErSOyAdXukcf4%3D" "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231.mp4" --recursive
+cd /home/azureuser/data/videos/MD
+ls
+source ~/.venv/python3-cv/bin/activate
+python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/SelectUndistort.py -fname "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231.mp4" -dst "/home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231" -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz 
+ls
+python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz 
+python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz 
+sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/init_focal_lenght.py -calib /home/azureuser/calibration_files/GP51457925-CALIB-01-GX010001.npz 
+source /etc/bash.bashrc
+sudo ldconfig
+sudo ./home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231  20
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+cd /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/
+ls
+sudo ./create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231  20
+sudo bash create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231  20
+ls
+cd clustering20
+ls
+cd 1
+ls
+cd ..
+cd 2
+cd ..
+rm -r clustering20/
+sudo rm -r clustering20/
+ls
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+ls
+nano create_clusters.bash 
+sudo bash create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231  20
+sudo bash create_clusters.bash /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/clustering /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231/  20
+
+cd clustering20/
+ls
+cd 1
+ls
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering 20 /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_bundler_clustering_files.sh /home/azureuser/data/videos/MD/MD-C4M-2-CALIB--GX010231
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering 20 /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+cd ..
+ls
+cd ..
+ls
+sudo ./run_bundler_clustering_files.sh /home/azureuser/data/videos/DE/DE-CE1-101CALIB-101-GX010031/clustering 20 /home/azureuser/calibration_files/GP51471258-CALIB-01-GX010002.txt
+ls
+exit

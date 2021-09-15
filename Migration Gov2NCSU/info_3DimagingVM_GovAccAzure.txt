@@ -1,0 +1,33 @@
+{
+  "extendedLocation": null,
+  "hyperVGeneration": "V1",
+  "id": "/subscriptions/576953e3-6b3c-49d6-8187-c020e121d81d/resourceGroups/3DWeeds/providers/Microsoft.Compute/images/3DimagingImage",
+  "location": "usgovvirginia",
+  "name": "3DimagingImage",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "3DWeeds",
+  "sourceVirtualMachine": {
+    "id": "/subscriptions/576953e3-6b3c-49d6-8187-c020e121d81d/resourceGroups/3DWeeds/providers/Microsoft.Compute/virtualMachines/3Dimaging",
+    "resourceGroup": "3DWeeds"
+  },
+  "storageProfile": {
+    "dataDisks": [],
+    "osDisk": {
+      "blobUri": null,
+      "caching": "ReadWrite",
+      "diskEncryptionSet": null,
+      "diskSizeGb": 512,
+      "managedDisk": {
+        "id": "/subscriptions/576953e3-6b3c-49d6-8187-c020e121d81d/resourceGroups/3DWEEDS/providers/Microsoft.Compute/disks/3Dimaging_OsDisk_1_e63e9c71e0a2483a92c502e0f1c0500d",
+        "resourceGroup": "3DWEEDS"
+      },
+      "osState": "Generalized",
+      "osType": "Linux",
+      "snapshot": null,
+      "storageAccountType": "Premium_LRS"
+    },
+    "zoneResilient": null
+  },
+  "tags": {},
+  "type": "Microsoft.Compute/images"
+}
