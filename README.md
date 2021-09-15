@@ -54,3 +54,20 @@ Based on [2], [3], and [4] we have explored differente options for reduce the co
 	- :warning: **Create a new environment!! For new scripts or libraries version**
 
 ![](https://lh4.googleusercontent.com/2LDdM7vl5IU3USp6xfXdvYsFoF2y8aAnZ9AmH8yiWsvGUCOIr6uuFkHarmtJgTwdoe_R0v4OisI7ejmyoOD_RFDmG2GX9BasAgoD2G75wb0Vm6zUpTuiVuMeMuA7V93JIaHbf8bx=s0)
+
+## What we are expecting to see?
+
+
+![](https://lh5.googleusercontent.com/yI6nZowzJ9TvRCtQ1Ki1n_XkeX0qrhjb9BDQXn5VFGUR3QeFRKn7AOJo9GmsYlUVqwdQ0AWu4lAFcYp7Aqxnnch1lpm2gDcxaYjW4bZMAK_3m0Wn6E8joGE78gGmbpCcRIhqPyIz=s0)
+
+  
+
+![](https://lh5.googleusercontent.com/TCjbk0Cq61hWBuTL_fENpq2HATu2Nlo6kVrs8ai1aYVH8xAacuxFaQJILA5xm5ZgL2ZIBI0tIsHaXpYx3qfcDPZPtK_3VNasdLkF14q1n189Dmk-WN_q9tSF0oBobX6R3ihDo2RY=s0)
+
+![](https://lh4.googleusercontent.com/D_b6noe4mvmebcDW8HGp41dsg7Jrc3d5Fem7gRQ9-3PoW9ZEG5jN16rd-cZLgni2jKA-ZftjjSY-lh_o7TrXJ94z0MzHCR2XROFkqTu57v-iEJzFkUUdiQm8DcsS_RiFrAoQeaaF=s0)
+
+  
+
+![](https://lh3.googleusercontent.com/HAH8weRzeSHPd0quxX6_9sgLUxGXnXamoa71I5Q5EXZRfzBWB39fMAbBtcQ0_Pp1zc2u0ioTy_cKSAFjXd1xpwPh7mOrskXjCRD3hajIcrH_dXAXeDW_0ilw9HB-21m40mrjf8qb=s0)
+
+![](https://lh6.googleusercontent.com/aVn7SuqHuZr4do5YoScN8Jtp4dWzzzBEmGJxWh4iS0dyzbm6Xpz0ypfr6yeRL6sO3Wt6rdMlNBmReJSLtqiZEeFxkpXHLJFlINgzUIPyAlBv1OaRChevlEquozMM8Xj1Z-22DcC4=s0)
