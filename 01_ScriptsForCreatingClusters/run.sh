@@ -69,6 +69,16 @@ cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/permissi
 #Give permission for all "pmvs" subfolders in the clustering folder
 sudo ./permissions_pmvs.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering  ${CLUSTERSIZE}
 
+#Copy the parallelization script to run SS in all clusters. Copy it in the active folder.
+cp /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/run_createSegs.sh "/home/azureuser/data/videos/${STATE}/${VIDEOFILE}"
+
+#Run SS model in all images and all clusters
+sudo ./run_createSegs.sh /home/azureuser/data/videos/${STATE}/${VIDEOFILE}/clustering${CLUSTERSIZE}
+
+#sudo python3 /home/azureuser/scripts/Weeds3D-APP-VM/01_ScriptsForCreatingClusters/createSegMaps.py -isize 1920 -ipath /home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064_20_10/clustering20/1 -opath /home/azureuser/data/videos/DE/DE-C4D-1S-CALIB-FIELD14SOY-GX010064_20_10/clustering20/1 -model /home/azureuser/segmentation/deeplabv3+/models/3_class_model_mobilenet_v3_small_v2.1/3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
+
+
+
 
 
 
