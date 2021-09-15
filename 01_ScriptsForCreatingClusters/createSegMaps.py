@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+#!/home/azureuser/.venv/tf_1/lib/python3.6/site-packages
+
+import sys
+sys.path.append("/home/azureuser/.venv/tf_1/lib/python3.6/site-packages")
+
 import tensorflow as tf
 import numpy as np
 from PIL import Image
@@ -55,11 +61,13 @@ class DeepLabModel():
             tf.import_graph_def(graph_def, name='')
         
         # To Run on CPU, uncomment below and add config to self.session as: ", config=config"
-        #config = tf.ConfigProto(
-        #    device_count = {'GPU': 0}
-        #    )
+        config = tf.ConfigProto(
+            device_count = {'GPU': 0}
+            )
 
-        self.sess = tf.Session(graph=self.graph)
+        #self.sess = tf.Session(graph=self.graph)
+        self.sess = tf.Session(graph=self.graph, config=config)
+
 
 
     def run(self, image):
@@ -74,7 +82,7 @@ class DeepLabModel():
 
         width, height = image.size
 
-        resize_ratio = 1.0 * self.INPUT_SIZE / max(width, height)
+        resize_ratio = 1.0 * float(self.INPUT_SIZE) / float(max(width, height))
         target_size = (int(resize_ratio * width), int(resize_ratio * height))
 
         resized_image = image.convert('RGB').resize(target_size, Image.ANTIALIAS)
