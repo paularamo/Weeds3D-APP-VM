@@ -107,9 +107,9 @@ To continue the work for the full automation process please visit [cronjob_weeds
 
 If you should migrate the VM please follow this [link](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/Migration%20Gov2NCSU)
 
-## File Structure
+## Folder Structure
 
-This is the file structur into the VM
+This is the folder structure into the VM
 
 ```
 /home/azureuser/
