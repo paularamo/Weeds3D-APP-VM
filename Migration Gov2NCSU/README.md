@@ -94,3 +94,4 @@ Select-AzureRmSubscription '5aa49bea-93fb-4d1c-ab7e-e4549cb2b935'
 
 Modify and run this script, **create_snapshot_in_new_subscription.ps1**
 
+
