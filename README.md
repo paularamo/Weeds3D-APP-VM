@@ -109,11 +109,7 @@ If you should migrate the VM please follow this [link](https://github.com/precis
 
 ## File Structure
 
-# Data Availability
-
-Due to the nature of this project, multiple sources of data have been used. These datasets are available for download below.
-
-## Collected RGB and Stereovision images
+This is the file structur into the VM
 
 ```
 /home/azureuser/
