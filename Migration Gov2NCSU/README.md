@@ -88,7 +88,7 @@ Modify and run this script, **create_image_in_new_subscription.ps1**
 ### Create a VM from the image
 Use **portal** for create a new VM. Take into account you should assing, disk, RAM, and memory type as the original VM has.
 
-# Congrats!! Your VM is ready to shine in other place!!!
+# Congrats!! Your VM is ready to shine in another place!!!
 
 Test the connectivity or create the connections you will need for.
 Test ssh connection and run your old scripts there.
