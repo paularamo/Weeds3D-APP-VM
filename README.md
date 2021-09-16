@@ -24,7 +24,7 @@ This open-sourced software platform uses multiple overlapping images from differ
 ## What do we need?
 
 - Android Tablet
-- Weeds3D APP
+- [Weeds3D APP](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/APP)
 	- Control and configure the GoPro before start a video.
 	- Create a tempo sound to walk 50bpm.
 	- Assign the video name with Calib-option and farm-code.
