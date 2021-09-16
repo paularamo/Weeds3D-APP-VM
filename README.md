@@ -62,9 +62,12 @@ Note:
 
 ### The pipeline so far
 
+#### Structure from Motion and Semantic Segmentation (SS)
 This is the first part of the deployment and all script about this schema are in [01_ScriptsForCreatingClusters](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/01_ScriptsForCreatingClusters)
 
 ![](https://lh4.googleusercontent.com/2LDdM7vl5IU3USp6xfXdvYsFoF2y8aAnZ9AmH8yiWsvGUCOIr6uuFkHarmtJgTwdoe_R0v4OisI7ejmyoOD_RFDmG2GX9BasAgoD2G75wb0Vm6zUpTuiVuMeMuA7V93JIaHbf8bx=s0)
+
+#### Matching points of the point cloud with SS labels
 
 The second part of our deployment is partially working, [00_ScriptsForAnalysisOfClusters](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/00_ScriptsForAnalysisOfClusters)
 
@@ -74,17 +77,27 @@ The second part of our deployment is partially working, [00_ScriptsForAnalysisOf
 
 For more details about how we could get those results please see this [Readme.md](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/blob/master/README.md)
 
+### 3D point cloud for small weeds
 ![](https://lh6.googleusercontent.com/5IRAd5rGZPTzngk4Lx-4hlbszb5qy5NkJgwVBSHCmJyD0OVmm1KnYt7VCr_66vSuVmlHwzfB8JnjXxGN2Cz4y83cGX69QlKEdhDGZtvHimQYtV7wDlZ-s74vmel1npmqTXtNCdL6=s0)
-
 ![](https://lh5.googleusercontent.com/yI6nZowzJ9TvRCtQ1Ki1n_XkeX0qrhjb9BDQXn5VFGUR3QeFRKn7AOJo9GmsYlUVqwdQ0AWu4lAFcYp7Aqxnnch1lpm2gDcxaYjW4bZMAK_3m0Wn6E8joGE78gGmbpCcRIhqPyIz=s0)
 
-![](https://lh5.googleusercontent.com/TCjbk0Cq61hWBuTL_fENpq2HATu2Nlo6kVrs8ai1aYVH8xAacuxFaQJILA5xm5ZgL2ZIBI0tIsHaXpYx3qfcDPZPtK_3VNasdLkF14q1n189Dmk-WN_q9tSF0oBobX6R3ihDo2RY=s0)
-
-![](https://lh4.googleusercontent.com/D_b6noe4mvmebcDW8HGp41dsg7Jrc3d5Fem7gRQ9-3PoW9ZEG5jN16rd-cZLgni2jKA-ZftjjSY-lh_o7TrXJ94z0MzHCR2XROFkqTu57v-iEJzFkUUdiQm8DcsS_RiFrAoQeaaF=s0)
-
+### 3D point cloud for medium weeds
 ![](https://lh3.googleusercontent.com/HAH8weRzeSHPd0quxX6_9sgLUxGXnXamoa71I5Q5EXZRfzBWB39fMAbBtcQ0_Pp1zc2u0ioTy_cKSAFjXd1xpwPh7mOrskXjCRD3hajIcrH_dXAXeDW_0ilw9HB-21m40mrjf8qb=s0)
 
 ![](https://lh6.googleusercontent.com/aVn7SuqHuZr4do5YoScN8Jtp4dWzzzBEmGJxWh4iS0dyzbm6Xpz0ypfr6yeRL6sO3Wt6rdMlNBmReJSLtqiZEeFxkpXHLJFlINgzUIPyAlBv1OaRChevlEquozMM8Xj1Z-22DcC4=s0)
+
+### 3D point cloud for big weeds
+![](https://lh5.googleusercontent.com/TCjbk0Cq61hWBuTL_fENpq2HATu2Nlo6kVrs8ai1aYVH8xAacuxFaQJILA5xm5ZgL2ZIBI0tIsHaXpYx3qfcDPZPtK_3VNasdLkF14q1n189Dmk-WN_q9tSF0oBobX6R3ihDo2RY=s0)
+![](https://lh4.googleusercontent.com/D_b6noe4mvmebcDW8HGp41dsg7Jrc3d5Fem7gRQ9-3PoW9ZEG5jN16rd-cZLgni2jKA-ZftjjSY-lh_o7TrXJ94z0MzHCR2XROFkqTu57v-iEJzFkUUdiQm8DcsS_RiFrAoQeaaF=s0)
+
+
+
+### SS result so far 
+This results is showing the integration with the Deep Learning model but it should be redefine once we have the proper classification model.
+
+![](https://lh5.googleusercontent.com/DXHADKZZG8OJ2VPiDFAW6SnOmMfW5HFCImq3zgyOq_wYlcan-Anmvo8Qzt8kX0Diile0uF7CuyFKuvv6v5NE1BCvDiqS038g-Lv_GsA8aPTyHJ1JLs5rhIFI1d91fMI9ByZUK3ic=s0)
+
+![](https://lh4.googleusercontent.com/e8xxpypBaQz8ECwqnGA7ADt1AuuFDdwxRUfqYPn_tLcjAfvpyvaOOxU6ajm7gGm8hnjyjBuVbRfBETnUwv51XqAM2kUogeqCi5Yr_DIe8c6PE03TO_thnrP80F3s243tDq4_KmQg=s0)
 
 ## Partial DevOps work
 
