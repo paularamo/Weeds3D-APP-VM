@@ -173,7 +173,18 @@ This is the file structur into the VM
 │   │   │   ├── read_txt.bash
 │   │   │   ├── run_bundler_clustering_files.sh
 │   │   │   ├── run_createSegs.sh 
-│   │   └── ...
+├── segmentation
+│   ├── deeplabv3+
+│   │   ├── input
+│   │   ├── models
+│   │   │   ├── 3_class_model_mobilenet_v3_small_v2.1
+│   │   │   │   ├── unfrozen
+│   │   │   │   ├── 3_class_model_mobilenet_v3_small_v2.1_360x640.pb
+│   │   │   │   ├── 3_class_model_mobilenet_v3_small_v2.1_540x960.pb
+│   │   │   │   ├── 3_class_model_mobilenet_v3_small_v2.1_1080x1920.pb
+│   │   ├── output
+│   │   ├── deploy.py
+│   │   ├── readme.txt
 │   └── ...
 └── ...
 ```
