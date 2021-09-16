@@ -106,3 +106,80 @@ To continue the work for the full automation process please visit [cronjob_weeds
 ## VM migration (Goverment2NCSU)
 
 If you should migrate the VM please follow this [link](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/Migration%20Gov2NCSU)
+
+## File Structure
+
+# Data Availability
+
+Due to the nature of this project, multiple sources of data have been used. These datasets are available for download below.
+
+## Collected RGB and Stereovision images
+
+```
+/home/azureuser/
+├── calibration_files
+│   ├── GP24667519-CALIB-02-GX010170.npz
+│   ├── GP24667519-CALIB-02-GX010170.txt
+│   ├── ...
+│   ├── GP51457925-CALIB-01-GX010001.npz
+│   ├── GP51457925-CALIB-01-GX010001.txt
+├── data
+│   ├── videos
+│   │   ├── DE
+│   │   │   ├── VIDEO_NAME_FOLDER
+│   │   │   │   ├── clustering<CLUSTER_SIZE>
+│   │   │   │   │   ├── 1
+│   │   │   │   │   │   ├── bundle
+│   │   │   │   │   │   │   ├── bundle_001.out
+│   │   │   │   │   │   │   ├── ...
+│   │   │   │   │   │   │   ├── points001.ply
+│   │   │   │   │   │   │   ├── ...
+│   │   │   │   │   │   ├── pmvs
+│   │   │   │   │   │   │   ├── models
+│   │   │   │   │   │   │   │   ├── pmvs_options.txt.ply
+│   │   │   │   │   │   │   │   ├── pmvs_options.txt.patch
+│   │   │   │   │   │   │   │   ├── pmvs_options.txt.pset
+│   │   │   │   │   │   │   ├── txt
+│   │   │   │   │   │   │   ├── visualize
+│   │   │   │   │   │   │   ├── bundle.rd.out
+│   │   │   │   │   │   │   ├── ...
+│   │   │   │   │   │   │   ├── prep_pmvs.sh
+│   │   │   │   │   │   ├── ...
+│   │   │   │   │   │   ├── undistortedimg000.jpg
+│   │   │   │   │   │   ├── undistortedimg000.key.gz
+│   │   │   │   │   │   ├── undistortedimg0000_segmentation.png
+│   │   │   │   │   │   ├── ...
+│   │   │   │   │   │   ├── RunBundler.sh
+│   │   │   │   │   │   ├── ...
+│   │   │   │   │   ├── 2
+│   │   │   │   │   ├── 3
+│   │   │   │   │   ├── ...
+│   │   │   │   │   ├── CLUSTER_NUMBER
+│   │   ├── MD
+│   │   ├── TX
+│   │   ├── IA
+│   │   ├── LA
+│   │   ├── VA
+│   │   ├── MN
+│   │   ├── VT
+│   │   ├── NC
+├── libraries
+├── scripts
+│   ├── Weed3D-APP-VM
+│   │   ├── 00_ScriptsForAnalysisOfClusters
+│   │   ├── 01_ScriptsForCreatingClusters
+│   │   │   ├── RunBundler.sh
+│   │   │   ├── SelectUndistort.py
+│   │   │   ├── createSegMaps.py
+│   │   │   ├── create_clusters.bash
+│   │   │   ├── init_focal_lenght.py
+│   │   │   ├── permissions_pmvs.sh
+│   │   │   ├── read_txt.bash
+│   │   │   ├── run_bundler_clustering_files.sh
+│   │   │   ├── run_createSegs.sh 
+│   │   └── ...
+│   └── ...
+└── ...
+```
+
+
