@@ -92,4 +92,4 @@ To continue the work for the full automation process please visit [cronjob_weeds
 
 ## VM migration (Goverment2NCSU)
 
-If you should migrate the VM please follow this [link]()
+If you should migrate the VM please follow this [link](https://github.com/precision-sustainable-ag/Weeds3D-APP-VM/tree/master/Migration%20Gov2NCSU)
