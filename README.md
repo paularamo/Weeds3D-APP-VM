@@ -5,13 +5,13 @@ This repository will show you how to run the scripts into a Ubuntu-Azure-VM for 
 ## References of this work
 
 
-Ramos, Paula & Avendaño, Jonathan & Prieto, Flavio. (2018). Measurement of the ripening rate on coffee branches by using 3D images in outdoor environments. Computers in Industry. 99. 83-95. 10.1016/j.compind.2018.03.024.
+[1] Ramos, Paula & Avendaño, Jonathan & Prieto, Flavio. (2018). Measurement of the ripening rate on coffee branches by using 3D images in outdoor environments. Computers in Industry. 99. 83-95. 10.1016/j.compind.2018.03.024.
 
-J. Avendano, P.J. Ramos, and F.A. Prieto. 2017. A system for classifying vegetative structures on coffee branches based on videos recorded in the field by a mobile device. _Expert Syst. Appl._ 88, C (December 2017), 178–192. DOI:https://doi.org/10.1016/j.eswa.2017.06.044
+[2] J. Avendano, P.J. Ramos, and F.A. Prieto. 2017. A system for classifying vegetative structures on coffee branches based on videos recorded in the field by a mobile device. _Expert Syst. Appl._ 88, C (December 2017), 178–192. DOI:https://doi.org/10.1016/j.eswa.2017.06.044
 
-S. Agarwal, N. Snavely, I. Simon, S. M. Seitz and R. Szeliski, "Building Rome in a day," _2009 IEEE 12th International Conference on Computer Vision_, 2009, pp. 72-79, doi: 10.1109/ICCV.2009.5459148.
+[3] S. Agarwal, N. Snavely, I. Simon, S. M. Seitz and R. Szeliski, "Building Rome in a day," _2009 IEEE 12th International Conference on Computer Vision_, 2009, pp. 72-79, doi: 10.1109/ICCV.2009.5459148.
 
-Xie X, Yang T, Li D, Li Z, Zhang Y. Hierarchical Clustering-Aligning Framework Based Fast Large-Scale 3D Reconstruction Using Aerial Imagery. _Remote Sensing_. 2019; 11(3):315. https://doi.org/10.3390/rs11030315
+[4] Xie X, Yang T, Li D, Li Z, Zhang Y. Hierarchical Clustering-Aligning Framework Based Fast Large-Scale 3D Reconstruction Using Aerial Imagery. _Remote Sensing_. 2019; 11(3):315. https://doi.org/10.3390/rs11030315
 
 # Complete pipeline
 
@@ -41,7 +41,7 @@ This open-sourced software platform uses multiple overlapping images from differ
 
 ## Structure from Motion
 
-Based on [2], [3], and [4] we have explored differente options for reduce the computational time than SfM technique requires. In the next image you could see these steps:
+Based on [1], [2], and [4] we have explored differente options for reduce the computational time than SfM technique requires. In the next image you could see these steps:
 
 1) Video/metadata collection: Camara+Tablet+APP.
 2) Blob Storage receives all videos and metadata.
@@ -49,7 +49,7 @@ Based on [2], [3], and [4] we have explored differente options for reduce the co
 	- Download the video from BlobStorage
 	- Split the video into frames and create undistorted images using the camera calibration file.
 	- Create clusters with and especific CLUSTERSIZE with 30% of overlapping with the next cluster.
-	- Run the Complete SfM pipeline [2] [3], in each cluster. This tasks is running in parallel for all clusters. Recording the video at 60fps, walking at 50 bpm, creating cluster of 20 images/cluster, and selecting 1 frame every 10 frames we are reducing the computation time in 90%.
+	- Run the Complete SfM pipeline [1] [2], in each cluster. This tasks is running in parallel for all clusters. Recording the video at 60fps, walking at 50 bpm, creating cluster of 20 images/cluster, and selecting 1 frame every 10 frames we are reducing the computation time in 90%.
 	- Run the Semantic Segmentation Model over each cluster, also in parallel.
 	
 Note: 
