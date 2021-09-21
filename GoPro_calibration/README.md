@@ -8,7 +8,7 @@ Please before use the GoPro camera you should run the calibration process.
 3. Open the APP and create a farm with the name of the camera you have and the world CALIB. Go to the "Camera info" option to know this name.  
 4. Make a calibration video using the APP.  
 5. Be aware that you should move the chess board during the video, and also stop into the key positions. See the next images for better understanding. In total you should have 42 key locations to stop during the video. This video could take in between 2 or 3 minutes, so no worries take your time.
-6. 
+
 ![](https://lh4.googleusercontent.com/0ILO1N3ssOxX9lPkBFoTaPGwYkkAXswDGZ7uye7Lyt0K2CmlVMThv6dJcNvYDe6_yrWTdp25yVLghKl0yOa-deRzBai_xDcIIt6z29EQvsmrOnCMGiWdfGjjldfwENxk4Qs8QM4e=s0)
 
   
