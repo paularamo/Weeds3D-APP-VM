@@ -22,4 +22,4 @@ Please before use the GoPro camera you should run the calibration process.
 
 The goal is to get a npz file with intrinsic matrix, distortion coefficients and focal length in mm per camera. As requirements you should have OpenCV > 3.0.0, python 3 and NumPy 1.18.0.  
   
-Run the python scripts included in the code section. **GoPro_calib*.py** will make an interface with your keyboard which is used to select the key locations of the chess board and select that frame as an input into the calibration process.
+Run the python scripts included in the code section. **GoPro_calib...py** will make an interface with your keyboard which is used to select the key locations of the chess board and select that frame as an input into the calibration process.
