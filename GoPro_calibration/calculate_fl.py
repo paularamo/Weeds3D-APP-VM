@@ -1,10 +1,17 @@
+import argparse
 import cv2, sys
 import numpy as np
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--npz", type=str, help="path to video used for calibration")
+args = parser.parse_args()
 
-print 'Loading data files'
+# Import Information
+filename = args.video_dir
 
-npz_calib_file = np.load('calibration_data.npz')
+print('Loading data files')
+
+npz_calib_file = np.load(filename)
 lst = npz_calib_file.files
 
 distCoeff = npz_calib_file['distCoeff']
