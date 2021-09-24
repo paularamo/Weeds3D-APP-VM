@@ -8,16 +8,20 @@
 # A video must first be taken of a chessboard pattern moved to a variety of positions
 # in the field of view with a GoPro.
 
+import argparse
 import os
 import sys
 from pathlib import Path
 
 import cv2
 import numpy as np
-##########################################################
-# Import Information. Change for each video
-filename = "videos/GP24667519-CALIB-02-GX010170.MP4"
-##########################################################
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--video_dir", type=str, help="Path to video used for calibration")
+args = parser.parse_args()
+
+# Import Information
+filename = args.video_dir
 if not os.path.exists(filename):
     print('Place video files in a folder named "videos"')
 
