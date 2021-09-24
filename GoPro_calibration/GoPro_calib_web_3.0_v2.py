@@ -14,23 +14,18 @@ from pathlib import Path
 
 import cv2
 import numpy as np
-
-# Import Information
+##########################################################
+# Import Information. Change for each video
 filename = "videos/GP24667519-CALIB-02-GX010170.MP4"
+##########################################################
+
 
 # Save file name
 save_fname = os.path.splitext(os.path.basename(filename))[0]
-
-# save_fname = Path(filename).stem
-# Name save folders
-# save_image = Path("calibration_images_test")
-# save_npz = Path("calibration_files")
 # Make folder for images and calibration files
 image_dir = f"calibration_images_test/{save_fname}"
 npz_dir = "calibration_files"
 os.makedirs(image_dir, exist_ok=True)
-# save_image.mkdir(parents=True, exist_ok=True)
-# save_npz.mkdir(parents=True, exist_ok=True)
 # Input the number of board images to use for calibration (recommended: ~20)
 n_boards = 2  # 40
 # Input the number of squares on the board (width and height)
