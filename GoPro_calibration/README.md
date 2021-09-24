@@ -19,6 +19,10 @@ Please before use the GoPro camera you should run the calibration process.
 
 ## Video processing
 
+TODO: [Tutorial here]
+
+1. Place GoPro videos in folder named "videos"
+2. `python GoPro_calib_web_3.0_v2.py --video_dir videos/GP24667519-CALIB-02-GX010170.MP4`
 
 The goal is to get a npz file with intrinsic matrix, distortion coefficients and focal length in mm per camera. As requirements you should have OpenCV > 3.0.0, python 3 and NumPy 1.18.0.  
   
