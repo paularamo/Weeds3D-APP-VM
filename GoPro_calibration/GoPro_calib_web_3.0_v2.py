@@ -99,9 +99,6 @@ def ImageCollect(filename, n_boards):
                 break
             if k == 32:
                 collected_images += 1
-                # Image file
-                # save_image_fname = Path(save_fname, filename)
-                # print(save_image_fname)
                 cv2.imwrite(
                     os.path.join(image_dir, "Calibration_Image" + str(collected_images) + ".png"),
                     image,
